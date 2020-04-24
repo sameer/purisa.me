@@ -1,5 +1,5 @@
 +++
-title = "HDMI outptut on an FPGA"
+title = "HDMI output on an FPGA"
 date = 2019-07-18T19:11:13-07:00
 +++
 
