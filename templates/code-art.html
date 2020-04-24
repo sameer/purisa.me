@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Code Art Gallery{% endblock %}
+
+{% block content %} 
+<h1>Gallery (click to view full-size)
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img class="adjacent-text" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" decoding="sync" />
+    </a>
+</h1>
+{% for asset in page.assets %}
+    {% set meta = get_image_metadata(path=asset) %}
+    <figure>
+        <a href="{{ get_url(path=asset) }}">
+            <img src="{{ get_url(path=asset) }}" srcset="{{ resize_image(path=asset, width=1920, op="fit_width") }} 1920w, {{ resize_image(path=asset, width=1280, op="fit_width") }} 1280w, {{ resize_image(path=asset, width=960, op="fit_width") }} 960w, {{ resize_image(path=asset, width=640, op="fit_width") }} 640w, {{ resize_image(path=asset, width=320, op="fit_width") }} 320w, {{ resize_image(path=asset, width=160, op="fit_width") }} 160w" alt="{{ meta.width }}">
+        </a>
+        <figcaption>
+            <h3>{{ asset | replace(from = "code-art/", to = "") | replace(from = ".png", to = "") }}</h3>
+            <!-- <br> -->
+            <!-- <p>{{ asset }}</p> -->
+        </figcaption>
+    </figure>
+{% else %}
+    <h2>No art yet, check back later!</h2>
+{% endfor %}
+<br>
+<b>All works on this page are licensed under the
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</b>
+{% endblock content %}

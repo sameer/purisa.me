@@ -1,0 +1,128 @@
+/* Copyright 2017 Sameer Puri; MIT licensed  (modifications) */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+pre > span {
+    font-family: monospace;
+}
+
+pre {
+    padding: 10px;
+}
+
+blockquote, details {
+    border: 1px solid silver;
+    padding: 10px;
+}
+img, video {
+    max-width: 100%;
+    max-height: 100%;
+}
+.container > img {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: auto;
+}
+img.ico {
+    height: 1em;
+    vertical-align: middle;
+}
+img.adjacent-text {
+    vertical-align: middle;
+}
+h1,h2 {
+    border-bottom: 1px solid silver;
+}
+
+a.zola-anchor {
+    display: inline-block;
+    margin-left: 1em;
+    border-bottom-color: transparent;
+    text-decoration: none;
+}
+
+/* Copyright 2014 Owen Versteeg; MIT licensed */
+body,textarea,input,select{
+    background:0;
+    border-radius:0;
+    margin:0;
+}
+.nav a{
+    text-decoration:none
+}
+.container{
+    margin:0 20px;
+    width:auto
+}
+
+textarea,input,select{
+    padding:8px;
+    border:1px solid #ccc
+}
+textarea:focus,input:focus,select:focus{
+    border-color:#5ab
+}
+textarea,input[type=text]{
+    -webkit-appearance:none;
+    width:13em
+}
+
+.nav,.nav .current,.nav a:hover{
+    background:#000;
+    color:#fff
+}
+.nav{
+    height:24px;
+    padding:11px 0 15px
+}
+.nav a{
+    color:#aaa;
+    padding-right:1em;
+    position:relative;
+    top:-1px
+}
+.nav .pagename{
+    font-size:22px;
+    top:1px
+}
+
+@media(min-width:1310px){
+    .container{
+        margin:auto;
+        width:1270px
+    }
+}
+
+@media(max-width:500px){
+    .btn.btn-close{
+        display:block
+    }
+    .nav{
+        overflow:hidden
+    }
+    .pagename{
+        margin-top:-11px
+    }
+    .nav:active,.nav:focus{
+        height:auto
+    }
+    .nav div:before{
+        background:#000;
+        border-bottom:10px double;
+        border-top:3px solid;
+        content:'';
+        float:right;
+        height:4px;
+        position:relative;
+        right:3px;
+        top:14px;
+        width:20px
+    }
+    .nav a{
+        padding:.5em 0;
+        display:block;
+        width:50%
+    }
+}
