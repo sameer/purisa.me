@@ -11,10 +11,12 @@ pre {
     padding: 10px;
 }
 
-blockquote, details {
+.footnote-definition, blockquote, details {
     border: 1px solid silver;
     padding: 10px;
+    margin-bottom: 5px;
 }
+
 img, video {
     max-width: 100%;
     max-height: 100%;

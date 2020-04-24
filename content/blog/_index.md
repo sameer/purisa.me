@@ -1,5 +1,5 @@
 +++
-title = "Blog posts sorted by date"
+title = "Blog Posts"
 sort_by = "date"
 template = "blog-index.html"
 page_template = "blog-page.html"
