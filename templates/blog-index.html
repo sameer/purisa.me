@@ -5,7 +5,7 @@
 <ul>
     {% for page in section.pages %}
     <li>
-            <a href="{{ page.permalink }}">{{ page.title }}</a> {{ page.date }}
+            <a href="{{ page.permalink }}">{{ page.title }}</a> {{ page.date | date(timezone="America/New_York",format="%B %e %Y %l:%M %p") }}
     </li>
     {% endfor %}
 </ul>
