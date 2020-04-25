@@ -124,6 +124,7 @@ After all this troubleshooting, something finally popped up:
 Overscan is a feature that crops the image and stretches it to fit the screen.
 
 The red border on my monitor below is cut off on my TV:
+
 ![Overscan area highlighted in red](display_overscan.jpg)
 
 Old CRT TVs had unreliable image scaling and positioning so TV stations designated a safe display area. Some took advantage of this and started sending other data in these regions. Even though modern TVs don't need this compensation, they keep it enabled by default so that it doesn't display. Samsung TVs only let you disable it on 16:9 resolutions unfortunately.
@@ -135,6 +136,7 @@ There's a lot of extensions to this project worth pursuing:
 ### Text output
 
 Being able to display text makes for easier debugging so I'm implementing [VGA-compatible text mode](https://en.wikipedia.org/wiki/VGA-compatible_text_mode):
+
 ![Demo of VGA-compatible text mode with rows of characters from 0 to M](display_text.jpg)
 
 ### Audio
