@@ -3,7 +3,7 @@ title = "Interfacing FPGAs with MIPI Cameras"
 date = 2020-05-16T02:50:39-07:00
 +++
 
-The FPGA board I'm using has a bunch of peripherals, and I've been writing SystemVerilog code to support them one by one. I posted about my [HDMI work](/blog/hdmi-on-fpga/) before, which has since reached maturity. The next step was naturally video input. It's been a long journey, and there's still more to be done.
+The FPGA board I'm using has a bunch of peripherals and I've been writing SystemVerilog code to support them one by one. I posted about my [HDMI work](/blog/hdmi-on-fpga/) before, which has since reached maturity. The next step was naturally video input. It's been a long journey and there's still more to be done!
 
 ## Inter-IC Bus (I2C)
 
@@ -11,41 +11,43 @@ Before even working with any camera-specific logic, I needed an [I2C bus master]
  
 ## MIPI Cameras
 
-If you've ever worked with a Raspberry Pi, you've probably heard of the [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/camera-module-v2/https://www.raspberrypi.org/products/camera-module-v2/). There are two versions of the module made by the Raspberry Pi Foundation has two versions. Version 1.x has an OmniVision OV5647 sensor and version 2.x has a Sony IMX219 sensor.
+If you've ever worked with a Raspberry Pi, you've probably heard of the [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/camera-module-v2/https://www.raspberrypi.org/products/camera-module-v2/). There are two versions of the module made by the Raspberry Pi Foundation. Version 1.x has an OmniVision OV5647 sensor and version 2.x has a Sony IMX219 sensor.
 
 ![Raspberry Pi Camera v1.3](rpi_camera_v1_3.jpg)
 ![Raspberry Pi Camera v2.1](rpi_camera.jpg)
 
 There is also a new ["High Quality" camera](https://www.raspberrypi.org/products/raspberry-pi-high-quality-camera/) with a Sony IMX477 but it costs $50. Getting a lens for it costs even more: ~$62.
 
-The three modules use interfaces created by the MIPI Alliance: Camera Serial Interface v2 and Camera Control Set v1.1.
+The three modules use interfaces created by the MIPI Alliance: Camera Serial Interface v2 and Camera Control Interface.
 
 ![MIPI CSI + CCS figure](interface.png)
 
 ### MIPI Camera Serial Interface (CSI) v2 
 
-CSI uses low voltage differential signaling (LVDS) to transmit packets of data from the camera module to the receiver. There are a total of up to 5 LVDS pairs. The first is the clock. The clock frequency is configured via MIPI CCS. The four remaining pairs, referred to as lanes, transmit the data itself. More lanes means a higher possible framerate and larger resolutions. There are two types of packets: short and long. Long packets can contain image data as a line of pixels in the image. Short packets usually contain control information (i.e. start/end of line, start/end of frame, etc.).
+CSI uses low voltage differential signaling ([LVDS](https://en.wikipedia.org/wiki/Low-voltage_differential_signaling)) to transmit packets of data from the camera module to the receiver. There are a total of up to 5 LVDS pairs. The first is the clock. The clock frequency is configured via MIPI CCS. The four remaining pairs, referred to as lanes, transmit the data itself. More lanes means a higher possible framerate and larger resolutions since bandwidth can be doubled, tripled or even quadrupled. There are two types of packets: short and long. Long packets contain image data as a line of pixels in the image, or some other embedded data. Short packets usually contain control information (i.e. start/end of line, start/end of frame, etc.).
 
-Technically, CSI is implemented on top of MIPI D-PHY, which defines the low-level physical and electrical characteristics of the interface. There should be a secondary low-power function on each lane including the clock that detects when a packet will begin and end:
+Technically, CSI is implemented on top of [MIPI D-PHY](https://www.mipi.org/specifications/d-phy), which defines the low-level physical and electrical characteristics of the interface. There should be a secondary low-power function on each lane including the clock that detects when a packet will begin and end:
 
 ![CSI Transmitter figure](receiver.png)
 
-However, because the board I'm using only has the high-speed function, the SystemVerilog implementation must constantly listen for the 8-bit synchronization sequence present at the beginning of a packet.
+However, because the board I'm using only has the high-speed function, the SystemVerilog implementation must constantly listen for the 8-bit synchronization sequence present at the beginning of a packet. The implementation is [available on GitHub](https://github.com/hdl-util/mipi-csi-2).
 
-### MIPI Camera Control Set (CCS) v1.1
+### MIPI Camera Control Interface (CCI) + Camera Control Set (CCS) v1.1
 
-Before capturing video, you have to configure the camera over I2C. There are a few common registers defined in CCS, but most of the important ones like clock tree configuration and CMOS sensor tuning are manufacturer specific. The [Linux kernel](https://github.com/torvalds/linux/blob/master/drivers/media/i2c/) has drivers for most camera modules.
+Before capturing video, the camera must be configured over I2C (aka the CCI). The CSI receiver is an I2C master and the camera module is an I2C slave. The camera module has a 16-bit address space containing configuration registers that can be read or written to.  A few common registers are defined in the CCS, but most of the important ones like clock tree configuration and CMOS sensor tuning are manufacturer specific. The [Linux kernel](https://github.com/torvalds/linux/blob/master/drivers/media/i2c/) has drivers for most camera modules.
 
 After reading the datasheet for IMX219, I implemented a driver with a few resolution modes. Here's the rough state machine diagram:
 
 ![CCS state machine diagram](ccs_state_machine.jpg)
 
-1. In pre-standby, the driver checks whether the model matches and puts the camera into standby. If not, it enters an error state.
-2. Once in standby, the driver enters pre-stream where a series of i2c register writes and reads are run to set the camera configuration. Then the camera is instructed to begin streaming.
-3. During streaming, the driver can be instructed to stop streaming or modify streaming (i.e. change exposure/gain)
-4. In post-stream, the driver prepares the camera module to be gracefully shut down or put into standby
+1. In pre-standby, the driver checks whether the model ID matches, and if so, puts the camera into standby. If not, it enters an error state.
+2. Once in standby, the driver can enter pre-stream where a series of i2c register writes and reads are run to set the camera configuration. Then the camera is instructed to begin streaming.
+3. During streaming, the driver can be instructed to stop streaming or modify streaming (i.e. change exposure/gain).
+4. In post-stream, the driver prepares the camera module to be gracefully shut down or put into standby.
 
 I've also implemented a driver for OV5647 that does just 640x480 for now, using the same interface and state machine concept. My hope is that eventually there will be a collection of drivers that enables plug and play usage of arbitrary MIPI camera modules. It would just be a matter of detecting the model and applying the right configuration over I2C.
+
+The implementation is [available on GitHub](https://github.com/hdl-util/mipi-ccs).
 
 ## Connecting everything together
 
@@ -57,7 +59,7 @@ To get the data from the MIPI CSI clock domain to the HDMI clock domain, you can
 
 ![Metastability figure](metastability.jpg)
 
-The ball could fall to either side of the hill. That's metastability in a nutshell; it means the value you read could be either 0 or 1. It usually occurs in clock domain crossing when the two clocks don't have a synchronous relationship and setup/hold violations occur. I've seen several techniques for resolving metastability:
+The ball could fall to either side of the hill, and there's no way to know. That's metastability in a nutshell; it means the value you read could be either 0 or 1, depending on where it settles. It usually occurs in clock domain crossing when the two clocks don't have a synchronous relationship and setup/hold violations occur. I've used several techniques for resolving metastability:
 
 #### Synchronizer Chain
 
@@ -71,17 +73,17 @@ To send a multi-bit value along with the control signal, you can add a mux to th
 
 ![Sync mux figure](sync_mux.jpg)
 
-The mux will swap its data bus from the flip-flop feedback path to the bus from the other clock domain once the control signal is received. At that point, the data will have settled and is no longer metastable.
+The mux will swap its data bus from the flip-flop feedback path to the bus from the other clock domain once the control signal is received. At that point, the data should have settled and is no longer metastable.
 
 #### Dual-Clock Fifo
 
-Sending large amounts of data at a high speed requires a dual clock fifo backed by dual clock RAM with gray code address pointers. Intel has one, but it's not too much work to write one. Debugging metastability can be hard though, since failures will appear infrequently and be difficult to reproduce.
+Sending large amounts of data at a high speed requires a dual clock fifo backed by dual clock RAM with gray code address pointers. Intel has one, but it's not too much work to write one. Debugging metastability can be hard though, since failures appear infrequently and are difficult to reproduce.
 
 ### DRAM Buffering
 
-After dealing with clock domain crossing for a few weeks, I had little luck. The pixels on the screen were a jittering mess. Shining a light over the camera told me none of the image data was actually reaching my display. This is when it hit me -- a FIFO on the FPGA could never be large enough to directly transmit video over HDMI.
+After dealing with clock domain crossing for a few weeks, I had little luck. The pixels on the screen were a jittering mess. Shining a light over the camera didn't change this, which told me none of the image data was actually reaching my display. That's when it hit me -- a FIFO on the FPGA could never be large enough to directly transmit video over HDMI.
 
-Say you wanted to capture 640x480 video and display it over HDMI. The HDMI frame will be slightly larger at 800x525 to accommodate the VSYNC/HSYNC signals and send auxiliary data like audio. For 112,800 of the pixels, video is not being sent. 
+Say you wanted to capture 640x480 video and display it over HDMI. The HDMI frame will be slightly larger at 800x525 to accommodate the VSYNC/HSYNC signals and send auxiliary data like audio. For 112,800 of the pixels (800 * 525 - 640 * 480), video is not being sent. 
 That amounts to around 330 KB of data (112,800 * 24 bits / 8 bits/byte / 1024 bytes/kilobyte), which could easily overflow the FIFO. Instead I needed to use an SDRAM chip to store the captured video and read it back for HDMI transmission. 
 
 I implemented an [SDRAM controller](https://github.com/hdl-util/sdram-controller) and posted about it on the [Arduino MKR Vidor 4000 forum](https://forum.arduino.cc/index.php?board=125.0) and it has since garnered some attention.
