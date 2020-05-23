@@ -1,6 +1,6 @@
 +++
 title = "Elephant bush succulent"
-date = 2020-05-17T10:36:00-07:00
+date = 2020-05-17T10:36:00-04:00
 +++
 
 I bought a wilting succulent the other day from a home improvement store to see if it could be revived.
