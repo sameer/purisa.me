@@ -61,8 +61,7 @@ iterations: 5
 Stochastic L-systems, where rules are probabilistically applied, can be used to create convincing models of nature in both 2D and 3D.
 
 ![Dragon trees](https://upload.wikimedia.org/wikipedia/commons/7/74/Dragon_trees.jpg)
-
-User:Solkoll [Public domain], via Wikimedia Commons
+*User:Solkoll [Public domain], via Wikimedia Commons*
 
 
 All L-systems that don't use '[' or ']' from the turtle graphics noted above can be drawn with a single line on paper. These would be really fun to try out with a pen plotter I've been working on for a group project, which I should be posting about in the near future.

@@ -32,9 +32,14 @@ ul > li:not(:last-child) {
 img, video {
     max-width: 100%;
 }
+
 /* Let text dominate the screen, not images. If it's the last image maybe we want it at original size */
 p:not(:last-child) > img, p:not(:last-child) > video {
     max-height: 30em;
+}
+
+img + em {
+    display: block;
 }
 
 .container > img {
