@@ -11,9 +11,15 @@
     {% set desc = asset | replace(from = "code-art/", to = "") | replace(from = ".png", to = "") %}
     <figure>
         <a href="{{ get_url(path=asset) }}">
-            <img src="{{ get_url(path=asset) }}"
-                srcset="{{ resize_image(path=asset, width=1920, op="fit_width") }} 1920w, {{ resize_image(path=asset, width=1280, op="fit_width") }} 1280w, {{ resize_image(path=asset, width=960, op="fit_width") }} 960w, {{ resize_image(path=asset, width=640, op="fit_width") }} 640w, {{ resize_image(path=asset, width=320, op="fit_width") }} 320w, {{ resize_image(path=asset, width=160, op="fit_width") }} 160w" 
-                alt="{{ desc }}">
+            <picture>
+                <source media="(min-width: 1536px)" srcset='{{ resize_image(path=asset, width=1920, op="fit_width") }}'>
+                <source media="(min-width: 1024px)" srcset='{{ resize_image(path=asset, width=1280, op="fit_width") }}'>
+                <source media="(min-width: 768px)" srcset='{{ resize_image(path=asset, width=960, op="fit_width") }}'>
+                <source media="(min-width: 512px)" srcset='{{ resize_image(path=asset, width=640, op="fit_width") }}'>
+                <source media="(min-width: 256px)" srcset='{{ resize_image(path=asset, width=320, op="fit_width") }}'>
+                <source media="(min-width: 128px)" srcset='{{ resize_image(path=asset, width=160, op="fit_width") }}' >
+                <img src="{{ get_url(path=asset) }}" alt="{{ desc }}">
+            </picture>
         </a>
         <figcaption>
             <h3>{{ desc }}</h3>
