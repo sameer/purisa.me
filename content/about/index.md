@@ -3,9 +3,9 @@ title = "About Me"
 template = "page.html"
 +++
 
-I'm Sameer Puri, a software development engineer at Amazon.
+I'm Sameer, a software development engineer at Amazon. Most of my free time goes towards my FPGA projects. They can be much more challenging to debug than software, but FPGAs are much more versatile! Technical things aside, I also enjoy gardening, hiking, and cooking.
 
-A few of my interests are creating art with code (fogleman/gg, libcairo, openvg, Java's Graphics2D, Processing3 etc.) hence the Code Art tab on my site, going on nature hikes, and working on projects in resource constrained systems like microcontrollers and FPGAs.
+Want to chat? You can reach by email at <span style="unicode-bidi: bidi-override; direction: rtl;">oi.irups@emasirup</span>
 
 ### Languages I typically use
 
@@ -16,6 +16,10 @@ A few of my interests are creating art with code (fogleman/gg, libcairo, openvg,
     <li>Java
         <img src="java.svg" class="ico">
     </li>
+    <li>
+        SystemVerilog
+        <img src ="system_verilog.svg" class="ico">
+    </li>
     <li>Python
         <img src="python.svg" class="ico">
     </li>
@@ -25,10 +29,6 @@ A few of my interests are creating art with code (fogleman/gg, libcairo, openvg,
     <li>Mathematica
         <img src="mathematica.svg" class="ico">
     </li>
-    <li>
-        SystemVerilog
-        <img src ="system_verilog.svg" class="ico">
-    </li>
 </ul>
 <br>
 
@@ -36,7 +36,7 @@ A few of my interests are creating art with code (fogleman/gg, libcairo, openvg,
 * [MIPI Camera Video Capture over MIPI D-PHY](https://github.com/hdl-util/mipi-csi-2)
 * [MIPI Camera Control over I2C](https://github.com/hdl-util/mipi-ccs)
 * [FPGA SDRAM controller](https://github.com/hdl-util/sdram-controller/)
-* [HDMI v1.4a audio/video output on an FPGA](https://github.com/hdl-util/hdmi/)
+* [HDMI v1.4b audio/video output on an FPGA](https://github.com/hdl-util/hdmi/)
 * [Vanderbilt Design Studio Automation](https://github.com/vanderbilt-design-studio/state-machine)
 * [Git Large File Storage with IPFS](https://github.com/sameer-git-lfs-ipfs)
 * [svg2gcode: convert vector graphics to pen plotter instructions](https://github.com/sameer/svg2gcode)
