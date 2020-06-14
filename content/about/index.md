@@ -23,11 +23,11 @@ Want to chat? You can reach by email at <span style="unicode-bidi: bidi-override
     <li>Python
         <img src="python.svg" class="ico">
     </li>
-    <li>Go
-        <img src="go.svg" class="ico">
-    </li>
     <li>Mathematica
         <img src="mathematica.svg" class="ico">
+    </li>
+    <li>Go
+        <img src="go.svg" class="ico">
     </li>
 </ul>
 <br>
