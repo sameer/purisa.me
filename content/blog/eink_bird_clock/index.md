@@ -8,7 +8,7 @@ Last summer, I bought a used [Kindle DX Graphite](https://en.wikipedia.org/wiki/
 ![Kindle DX Graphite](Kindle-DX-Graphite.jpg)
 *User:Evan-Amos Public Domain, via Wikimedia Commons*
 
-Originally released in 2010, the Kindle DX Graphite has a large 9.7" [E Ink Pearl](https://wiki.mobileread.com/wiki/E_Ink_Pearl) display, a full QWERTY keyboard and audio playback capabilities.
+Originally released in 2010, the Kindle DX Graphite has a large 9.7" [E Ink Pearl](https://wiki.mobileread.com/wiki/E_Ink_Pearl) display, a full QWERTY keyboard, and audio playback capabilities.
 
 I have an old Howard Miller Songbird clock that stopped working, so I decided to digitally recreate it on the Kindle.
 
@@ -91,13 +91,13 @@ I immediately transferred it to my computer just in case. If you need a copy, fe
 
 ### Serial console
 
-Flashing the Kindle with the `rootfs.img` turned out to be more than I bargained for.
-I needed to get access to the [onboard serial console](https://www.mobileread.com/forums/showthread.php?t=49942) to open the recovery menu and enable access to the entire Kindle filesystem over USB.
+Flashing the Kindle with the `rootfs.img` turned out to be more than I bargained for. Normally, only the user storage is exposed over USB.
+I needed to use the [onboard serial console](https://www.mobileread.com/forums/showthread.php?t=49942) to open the recovery menu and enable access to the entire filesystem.
 
 ![Serial console pinout](https://www.mobileread.com/forums/attachment.php?attachmentid=31375&d=1246319476)
 *User:ebs, MobileRead forums*
 
-I didn't have a USB to TTL UART converter, but I was able to borrow my brother's [Digilent Analog Discovery 2](https://store.digilentinc.com/analog-discovery-2-100msps-usb-oscilloscope-logic-analyzer-and-variable-power-supply/) which supported UART:
+I didn't have a [USB to TTL UART converter](https://www.adafruit.com/product/954), but I was able to borrow my brother's [Digilent Analog Discovery 2](https://store.digilentinc.com/analog-discovery-2-100msps-usb-oscilloscope-logic-analyzer-and-variable-power-supply/) which supported UART:
 
 ![Digilent Analog Discovery 2](digilent.jpg)
 *SparkFun Electronics, CC BY 2.0*
@@ -117,7 +117,7 @@ Q. quit
 Choose:  3
 ```
 
-I dd'd the `rootfs.img` to the Kindle:
+I [dd](https://linux.die.net/man/1/dd)'d the `rootfs.img` to the Kindle:
 
 ```bash
 dd if=rootfs.img of=/dev/sdb bs=4M status=progress oflag=sync
@@ -199,7 +199,9 @@ This could be fixed with [e-ink graphics preprocessing](https://learn.adafruit.c
 
 #### Audio
 
-I recorded the hourly bird sounds from the clock using [Audacity](https://www.audacityteam.org/) and cleaned them up with [SoX](https://github.com/chirlu/sox).
+I recorded the hourly bird sounds from the clock using [Audacity](https://www.audacityteam.org/) and cleaned them up with [SoX](https://github.com/chirlu/sox). Listen to the Great Horned Owl:
+
+<audio controls src="12.wav">Your browser does not support audio playback.</audio>
 
 To play them, the daemon connects to the Kindle over ssh and streams the WAV file to the standard input of `aplay`. This is where the power of Rust shines. The entire WAV file can be included at compile time with the [include_bytes](https://doc.rust-lang.org/std/macro.include_bytes.html) macro:
 
@@ -225,10 +227,70 @@ The same is done for the artwork. This is convenient since the daemon could be r
 
 #### Weather
 
-As a bonus, I added weather to the clock. Raw [METAR](https://en.wikipedia.org/wiki/METAR) observations are pulled from [https://aviationweather.gov](https://aviationweather.gov) and parsed with Lily Hopkins' [Rust METAR parsing library](https://github.com/lilopkins/metar-rs).
+As a bonus, I added weather to the clock. Raw [METAR](https://en.wikipedia.org/wiki/METAR) observations are pulled from [https://aviationweather.gov](https://aviationweather.gov) and parsed with Lily Hopkins's [Rust METAR parsing library](https://github.com/lilopkins/metar-rs).
 
 ```
-KTPA 142053Z 03007KT 10SM SCT050TCU SCT070 BKN260 32/20 A2998 RMK AO2 SLP151 CB DSNT E TCU N AND DSNT S AND NW T03170200 57019
+KTPA 160153Z VRB04KT 10SM FEW070 28/14 A3006 RMK AO2 SLP179 T02830144
+```
+
+Which is interpreted as:
+
+```
+Metar {
+    station: "KTPA",
+    time: Time {
+        date: 16,
+        hour: 1,
+        minute: 53,
+    },
+    wind: Wind {
+        dir: Known(
+            Variable,
+        ),
+        speed: Known(
+            WindSpeed {
+                speed: 4,
+                unit: Knot,
+            },
+        ),
+        varying: None,
+        gusting: None,
+    },
+    visibility: Known(
+        Visibility {
+            visibility: 10.0,
+            unit: StatuteMiles,
+        },
+    ),
+    clouds: Known(
+        CloudLayers,
+    ),
+    cloud_layers: [
+        Few(
+            Normal,
+            Some(
+                70,
+            ),
+        ),
+    ],
+    vert_visibility: None,
+    weather: [],
+    temperature: Known(
+        28,
+    ),
+    dewpoint: Known(
+        14,
+    ),
+    pressure: Known(
+        Pressure {
+            pressure: 3006.0,
+            unit: InchesMercury,
+        },
+    ),
+    remarks: Some(
+        "RMK AO2 SLP179 T02830144",
+    ),
+}
 ```
 
 The parsed METAR is converted into a succinct set of weather condition emojis for display (i.e 🌩️ for thunderstorm) along with the temperature and wind speed.
