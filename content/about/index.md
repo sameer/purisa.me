@@ -3,7 +3,7 @@ title = "About Me"
 template = "page.html"
 +++
 
-I'm Sameer, a software development engineer at Amazon. Most of my free time goes towards my FPGA projects. They can be more challenging to debug than software, but FPGAs are applicable to tons of projects! Technical things aside, I also enjoy gardening, hiking, and cooking.
+I'm Sameer, a software development engineer at Amazon. Much of my free time goes towards my FPGA projects. FPGA development has a class of problems not found in software development, but that challenge is what makes it a rewarding hobby! Technical things aside, I also enjoy gardening, hiking, and cooking.
 
 Want to chat? You can reach by email at <span style="unicode-bidi: bidi-override; direction: rtl;">oi.irups@emasirup</span>
 
