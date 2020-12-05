@@ -20,6 +20,28 @@ pre {
     max-width: calc(100% - 20px);
 }
 
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: solid black 1px;
+}
+
+th, td {
+    padding: 0.2em;
+}
+
+th:not(:last-child), td:not(:last-child) {
+    border-right: solid black 1px;
+}
+
+
+th:not(:first-child), td:not(:first-child) {
+    text-align: center;
+}
+
 .footnote-definition, blockquote, details {
     border: 1px solid silver;
     padding: 10px;
@@ -38,6 +60,7 @@ img, video {
 /* Let text dominate the screen, not images. If it's the last image maybe we want it at original size */
 p:not(:last-child) > img, p:not(:last-child) > video {
     max-height: 30em;
+    border: solid whitesmoke 1px;
 }
 
 img + em {

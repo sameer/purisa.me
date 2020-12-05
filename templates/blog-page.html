@@ -2,6 +2,8 @@
 
 {% block content %}
     <h1>{{ page.title }}</h1>
-    <h3><img src="../time.svg" class="ico"> {{ page.reading_time }} minute read <img src="../write.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}</h3>
+    <h3><img src="../time.svg" class="ico"> {{ page.reading_time }} minute read <br>
+        <img src="../write.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
+    </h3>
     {{ page.content | safe }}
 {% endblock content %}
