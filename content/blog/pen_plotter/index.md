@@ -12,7 +12,8 @@ The two large stepper motors (black cubes) are connected via a single timing bel
 
 ![Plotter demo 1](plotter_demo_1.jpg)![Plotter demo 2](plotter_demo_2.jpg)
 
-I originally used the [GCodeTools](https://github.com/cnc-club/gcodetools) extension that comes with Inkscape to convert vector graphics into the GCode instructions for the plotter but found it to be unwieldy. The extension was primarily made for CNC milling machines which have a z-axis and many settings that are unrelated to pen plotters. Every time you want to convert an SVG, you have to reconfigure settings in a tool dialog that pops up and covers your image.
+I originally used the [GCodeTools](https://github.com/cnc-club/gcodetools) extension that comes with Inkscape to convert vector graphics into the GCode instructions for the plotter but found it to be unwieldy. The extension was primarily made for CNC milling machines which have a z-axis and many settings that are unrelated to pen plotters. Every time you want to convert an SVG, you have to reconfigure settings in a tool dialog that pops up and covers your image:
+
 ![GCodeTools dialog](gcodetools.svg)
 
 To make printing things easier, I wrote [svg2gcode](https://github.com/sameer/svg2gcode), which converts SVGs to GCode for a pen plotter[^2]. SVG paths (bezier curves, lines, elliptical curves, etc.) and other important elements like rotations are transformed into an intermediate turtle graphics representation and then converted into GCode instructions. I used this in combination with work mentioned in my [Lindenmayer systems post](Lindenmayer Systems) to draw the Sierpinski Triangle, Koch Snowflake, and gosper seen above.
