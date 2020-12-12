@@ -15,7 +15,6 @@ p > code {
 pre {
     padding: 10px;
     background-color: rgba(27,31,35,.05) !important;
-    display: inline-block;
     overflow-x: auto;
     max-width: calc(100% - 20px);
 }
@@ -73,13 +72,13 @@ img + em {
     display: block;
     margin: auto;
 }
-img.ico {
+img.ico, img.adjacent-text {
     height: 1em;
-    vertical-align: sub;
+    vertical-align: baseline;
+    position: relative;
+    top: .125em;
 }
-img.adjacent-text {
-    vertical-align: middle;
-}
+
 h1,h2 {
     border-bottom: 1px solid silver;
 }

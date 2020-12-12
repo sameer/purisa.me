@@ -7,7 +7,7 @@
     <li>
             <a href="{{ page.permalink }}">{{ page.title }}</a>
             <br>
-            <img src="time.svg" class="ico"> {{ page.reading_time }} minute read <img src="write.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
+            <img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read <img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
     </li>
     {% endfor %}
 </ul>
