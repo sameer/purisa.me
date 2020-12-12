@@ -27,6 +27,18 @@
          url("inter-ui/Inter (web latin)/Inter-Bold.woff?v=3.15") format("woff");
 }
 
+.begone-scrapers {
+    // Use RTL to trick scrapers
+    unicode-bidi: bidi-override;
+    direction: rtl;
+
+    // Prevent selection so it doesn't confuse anyone trying to copy + paste it
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 html {
     font-family: 'Inter', sans-serif;
 }

@@ -5,7 +5,7 @@ template = "page.html"
 
 I'm Sameer, a software development engineer at Amazon. Much of my free time goes towards my FPGA projects. FPGA development has a class of problems not found in software development, but that challenge is what makes it a rewarding hobby! Technical things aside, I also enjoy gardening, hiking, and cooking.
 
-Want to chat? You can reach by email at <span style="unicode-bidi: bidi-override; direction: rtl;">oi.irups@emasirup</span>
+Want to chat? You can reach by email at <span class="begone-scrapers">em.asirup@reemas</span>
 
 ### Languages I typically use
 
