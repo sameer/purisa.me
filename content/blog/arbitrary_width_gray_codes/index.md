@@ -57,7 +57,7 @@ The sender might think the buffer is full early, or the receiver might think the
 
 Now that we've considered a use case for gray code, how do you make a coding? You can sketch it out on paper and try out a few different combinations, but it quickly gets tedious for numbers with many bits.
 
-The simplest method I've found for generating one is by repeated reflection:
+The easiest method to understand is generating by repeated reflection:
 
 $ n \in \mathbb{Z^+} \\\\
 x_i \in [0, 1] \\\\
@@ -65,9 +65,19 @@ X \in [0,1,\dots,2^n) \\\\
 X = [x_0, x_1, \dots, x_{n-1}] \\\\
 gray(X) := [grayBit(x_0), grayBit(x_1), \dots, grayBit(x_{n-1})] \\\\
 grayBit(x_i) := \begin{cases}
-    x_i &\text{if } X \bmod 2^{i+2} < 2^{i+1} \\\\
+    x_i &\text{if } X \bmod 2^{i+2} \lt 2^{i+1} \\\\
     1 - x_i &\text{otherwise}
 \end{cases}
+$
+
+In simpler terms:
+
+$ gray(X) := X \oplus (X \gg 1) \\\\
+$
+
+With an inverse function of:
+
+$ degray(X) := \bigoplus_{j = 0}^{n} X \gg j\\\\
 $
 
 In just a few lines, you can describe a gray code valid for arbitrary width with O(n) run time, taking O(1) space.
