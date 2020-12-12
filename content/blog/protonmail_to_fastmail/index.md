@@ -52,7 +52,7 @@ I created a local folder called "ProtonMail", and right clicking on that folder,
 
 In terms of functionality, the Fastmail app is far superior than other mail apps I've used. It appears to have feature parity with the website. What would be 5 separate Google apps is packed into a single app. Yet it doesn't feel overcrowded.
 
-My only gripe is that the third line of message text is cut off instead of being hidden:
+My only gripe is that the third line of message text is cut off in the inbox view:
 
 ![Android App screenshot](app.jpg)
 
