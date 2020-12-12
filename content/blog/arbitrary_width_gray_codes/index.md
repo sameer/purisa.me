@@ -93,3 +93,5 @@ When a gray code is balanced, the transitions (i.e. 16 for 4-bit, 256 for 8-bit)
 I think this could improve metastability handling for a FIFO where one clock is very slow and one is very fast (i.e 48kHz to 300MHz).
 
 More discussion and helpful research papers about this are [in issue #1 of hdl-util/gray-code on GitHub](https://github.com/hdl-util/gray-code/issues/1).
+
+This might be a suitable problem for the [Z3 theorem provder](https://github.com/Z3Prover/z3) to handle.
