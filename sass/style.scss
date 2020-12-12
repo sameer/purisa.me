@@ -47,6 +47,10 @@ th:not(:first-child), td:not(:first-child) {
     margin-bottom: 5px;
 }
 
+.footnote-definition > p {
+    display: inline;
+}
+
 /* Gives the top list element some spacing */
 ul > li:not(:last-child) {
     margin-bottom: 0.2em;
