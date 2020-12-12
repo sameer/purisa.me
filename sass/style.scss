@@ -119,6 +119,7 @@ img + em {
 img.ico, img.adjacent-text {
     height: 1em;
     vertical-align: baseline;
+    // As per https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
     position: relative;
     top: .125em;
 }
