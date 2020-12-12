@@ -1,3 +1,3 @@
 [submodule "static/MaterialDesign-SVG"]
 	path = static/MaterialDesign-SVG
-	url = git@github.com:Templarian/MaterialDesign-SVG.git
+	url = https://github.com/Templarian/MaterialDesign-SVG.git
