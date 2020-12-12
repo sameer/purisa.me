@@ -96,8 +96,8 @@ ul > li, ol > li {
     margin-top: 0.2em;
 }
 
-/* Don't apply to the very first element in a list */
-:not(ul):not(ol) > ul > li:is(:first-child), :not(ul):not(ol) > ol > li:is(:first-child) {
+/* Don't apply to the very first element in a top-level list */
+div > ul > li:is(:first-child), div > ol > li:is(:first-child) {
     margin-top: auto;
 }
 
