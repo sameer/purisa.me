@@ -91,9 +91,14 @@ th:not(:first-child), td:not(:first-child) {
     display: inline;
 }
 
-/* Gives the top list element some spacing */
-ul > li:not(:last-child) {
-    margin-bottom: 0.2em;
+/* Give list elements some spacing */
+ul > li, ol > li {
+    margin-top: 0.2em;
+}
+
+/* Don't apply to the very first element in a list */
+:not(ul):not(ol) > ul > li:is(:first-child), :not(ul):not(ol) > ol > li:is(:first-child) {
+    margin-top: auto;
 }
 
 img, video {
