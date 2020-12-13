@@ -43,6 +43,7 @@ ProtonMail doesn't fall under any of those categories. It has the ["bridge" app]
 It turns out that there's an indirect way to get mail in `.mbox` format onto Fastmail using Thunderbird. I last used Thunderbird over 5 years ago. The UI has definitely come a long way; it's like Firefox but just for mail!
 
 ![Thunderbird UI](thunderbird-screenshot-linux.png)
+*Mozilla Foundation, CC BY-SA 3.0*
 
 After installing Thunderbird, I configured IMAP [following Fastmail's instructions](https://www.fastmail.com/help/clients/thunderbird.html). Thunderbird doesn't have built-in functionality to import from `.mbox` files so I installed the [ImportExportTools NG](https://addons.thunderbird.net/en-US/thunderbird/addon/importexporttools-ng/?src=search) extension.
 
