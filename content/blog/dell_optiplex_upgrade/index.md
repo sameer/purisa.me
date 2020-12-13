@@ -144,7 +144,7 @@ The standoffs are welded and can't be removed. The new cooler has a different mo
 *www.noctua.at*
 
 
-There's a backplate with four threaded poles that is supposed to fit behind the motherboard. This works for most desktop cases, but it couldn't fit mine because of standoffs. In [The_Chad's video](https://www.youtube.com/watch?v=rTILMvzbFnc), they explained tht screws from the AMD mounting kit could be used to forcibly mount the two cooler mounting brackets onto the standoffs, stripping the threads. I didn't want to do that just I had to go back to using the stock cooler. At this point I was planning on returning the cooler. The last thing I tried was finding screws around the house that might fit the standoffs. I searched a jar of miscellaneous screws (the one that everyone has) and by pure chance, found four screws that fit perfectly. They're just M3 x 18MM screws that you can get from a local hardware store. *As far as I've read, this isn't publicly documented anywhere else.*
+There's a backplate with four threaded poles that is supposed to fit behind the motherboard. This works for most desktop cases, but it couldn't fit mine because of standoffs. In [The_Chad's video](https://www.youtube.com/watch?v=rTILMvzbFnc), they explained that screws from the AMD mounting kit could be used to forcibly adhere the cooler mounting brackets onto the standoffs, stripping the threads. I didn't want to do that just in case I had to revert to the stock cooler. At this point I was planning on returning the Noctua cooler. The last thing I tried was finding screws around the house that might fit the standoffs. I searched a jar of miscellaneous screws (the one that everyone has) and by pure chance, found four screws that fit perfectly. They're just M3 x 18MM screws that you can get from a local hardware store. *As far as I've read, this isn't publicly documented anywhere else.*
 
 ![Cooler mount installed, top view](cooler_mount_top.jpg)![Cooler mount installed, closeup view](cooler_mount_closeup.jpg)
 *Please ignore the excessive thermal paste 😅*
@@ -159,8 +159,8 @@ It's also worth mentioning that Dell uses its own fan cable connector and color 
 |--|--|--|
 |GND|Black|Black|
 |12V|Red|Yellow|
-|Tachometer|Yellow|Green|
-|PWM Control|Blue|Blue|
+|Tachometer (RPM Sense)|Yellow|Green|
+|PWM (RPM Control)|Blue|Blue|
 
 I had to remove a few things to fit it in the case, but they weren't that important:
 
@@ -177,4 +177,8 @@ I had to remove a few things to fit it in the case, but they weren't that import
     * This means the case can't be locked shut, but I can still close the side panel and hold it shut with a sliver of tape
 
 With this cooler installed, the hottest my CPU's gotten is 62&deg;C under full load for a few hours.
-I'm still figuring out airflow but it seems fine so far with the side panel on. The case fan has an annoying hum so I've replaced it with an [NF-A8 PWM](https://noctua.at/en/nf-a8-pwm).
+I'm still figuring out airflow but it seems fine so far with the side panel on.
+
+### What's next?
+
+I've fit in almost all the upgrades possible. The only thing left is to eliminate noise coming from the fans. The Noctua cooler fan is already whisper quiet. I've replaced the case fan with an [NF-A8 PWM](https://noctua.at/en/nf-a8-pwm/specification). I'm still waiting on the iglide bearings to quiet down the [noisy gpu fan](#noisy-fan). I've yet to look at the PSU or NVMe adapter card fans. Stay tuned!
