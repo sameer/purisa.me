@@ -5,13 +5,13 @@ date = 2020-12-11T06:15:00-05:00
 
 Back in February, I bought a Dell Optiplex 7020 SFF. It fits in a carry-on bag, but it's big enough that I've been able to install some much-needed upgrades.
 
-### <img class="ico" src="/MaterialDesign-SVG/svg/expansion-card.svg" alt="GPU icon"> GPU: [Radeon Pro WX 4100](https://www.amd.com/en/products/professional-graphics/radeon-pro-wx-4100)
+## <img class="ico" src="/MaterialDesign-SVG/svg/expansion-card.svg" alt="GPU icon"> GPU: [Radeon Pro WX 4100](https://www.amd.com/en/products/professional-graphics/radeon-pro-wx-4100)
 
 Because the desktop is small form factor, I needed a GPU that's half height and low profile. It also couldn't have auxiliary power requirements since the [Dell PSU has proprietary connectors](https://www.dell.com/community/Optiplex-Desktops/Optiplex-3020-7020-9020-XE2-Dell-8pin-ATX-MB-pinout/td-p/7538164) and I didn't want to risk wiring it up incorrectly. The Radeon Pro WX 4100 is the newest GPU that meets all those requirements.
 
 It fits in the PCIe x16 slot well. The blower fan intake is right next to the case fan, and there's enough space to add a second expansion card in the adjacent PCIe x4 slot. So far it's been great for lightweight/medium gaming ([CS:GO](https://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive), [Team Fortress 2](https://en.wikipedia.org/wiki/Team_Fortress_2), etc.). Supposedly, it can drive four 4K monitors at once.
 
-#### Noisy Fan
+### Noisy Fan
 
 My only complaint is that the fan gets loud at high RPM. Though that's probably true to some extent for all cards with blower fans. On Linux I use [rocm-smi](https://github.com/RadeonOpenCompute/ROC-smi) to control fan speed and power usage:
 ```bash
@@ -36,13 +36,13 @@ My plan now is to replace the bearings with [igus iglide J sleeve bearings (JSM-
 ![igus iglide J](igus_iglide_j.jpg)
 *igus GmbH*
 
-### <img class="ico" src="/MaterialDesign-SVG/svg/expansion-card-variant.svg" alt="SSD icon"> [Samsung EVO 970 500GB](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-970-evo-nvme-m2-500gb-mz-v7e500bw/)
+## <img class="ico" src="/MaterialDesign-SVG/svg/expansion-card-variant.svg" alt="SSD icon"> [Samsung EVO 970 500GB](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-970-evo-nvme-m2-500gb-mz-v7e500bw/)
 
 Sluggishness on computers is often because hard drives (and SATA in general) have lower throughput and higher latency[^1]. Installing an NVMe drive is perhaps the *biggest* improvement I could make. They've only become generally available in the last few years, but older computers can still support them.
 
 Most NVMe SSDs come in M.2 format. Older motherboards don't have an M.2 PCIe slot, so I used an [M.2 PCIe to PCIe x4 adapter](https://www.amazon.com/gp/product/B07ZQ15S43/) to install it.
 
-#### Booting workaround
+### Booting workaround
 
 One other gotcha is that BIOS for the Optiplex 7020 [does not support booting directly from NVMe storage](https://www.dell.com/community/Optiplex-Desktops/M-2-NVME-as-boot-drive-Optiplex-7020/td-p/7722595). I've come up with the following workaround:
 1. Store the [EFI system partition](https://en.wikipedia.org/wiki/EFI_system_partition) (or [MBR](https://en.wikipedia.org/wiki/Master_boot_record)) on a SATA drive (SSD/HDD) or USB
@@ -78,11 +78,11 @@ Now it takes just a few seconds to load up Linux and start [sway](https://swaywm
 
 [^1]: There are other factors like memory bandwidth and single-core performance, but those pale in comparison when you look at user perceived latency
 
-### <img class="ico" src="/MaterialDesign-SVG/svg/chip.svg" alt="RAM icon"> RAM: SK Hynix DDR3 1600 MHz
+## <img class="ico" src="/MaterialDesign-SVG/svg/chip.svg" alt="RAM icon"> RAM: SK Hynix DDR3 1600 MHz
 
 The desktop came with a single stick of 4GB RAM. I've since added another 4GB and an 8GB stick of SK Hynix RAM. The [spec sheet for the Optiplex 7020](https://i.dell.com/sites/csdocuments/Business_smb_merchandizing_Documents/en/us/Dell-OptiPlex-7020-Technical-Spec-Sheet-FINAL.pdf) claims the maximum usable memory is 16GB though the [processor can support up to 32GB](https://ark.intel.com/content/www/us/en/ark/products/80815/intel-core-i5-4590-processor-6m-cache-up-to-3-70-ghz.html). That's not a big deal, I can't imagine using more than 16GB with [zram](https://wiki.archlinux.org/index.php/Improving_performance#Zram_or_zswap) and [swap](https://wiki.archlinux.org/index.php/Swap) enabled.
 
-### <img class="ico" src="/MaterialDesign-SVG/svg/memory.svg" alt="CPU icon"> CPU: [Intel i7-4790k](https://ark.intel.com/content/www/us/en/ark/products/80807/intel-core-i7-4790k-processor-8m-cache-up-to-4-40-ghz.html)
+## <img class="ico" src="/MaterialDesign-SVG/svg/memory.svg" alt="CPU icon"> CPU: [Intel i7-4790k](https://ark.intel.com/content/www/us/en/ark/products/80807/intel-core-i7-4790k-processor-8m-cache-up-to-4-40-ghz.html)
 
 The [i5-4590](https://ark.intel.com/content/www/us/en/ark/products/80815/intel-core-i5-4590-processor-6m-cache-up-to-3-70-ghz.html) I had works well enough, but I wanted better single-thread performance. CPU-World's [great comparison table of LGA1150 processors](https://www.cpu-world.com/Sockets/Socket_1150_LGA1150_H3.html) helped me pick the i7-4790k:
 
@@ -99,7 +99,7 @@ The [i5-4590](https://ark.intel.com/content/www/us/en/ark/products/80815/intel-c
 
 The [i7-5775C](https://ark.intel.com/content/www/us/en/ark/products/88040/intel-core-i7-5775c-processor-6m-cache-up-to-3-70-ghz.html) was an interesting option because of its [128MB eDRAM L4 cache](https://en.wikipedia.org/wiki/EDRAM). It seems that it's [useful for rendering](https://www.anandtech.com/show/16195/a-broadwell-retrospective-review-in-2020-is-edram-still-worth-it) and [Monero mining](https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md#choose-value-for-low_power_mode) but I'm doing neither.
 
-#### Thermal issues
+### Thermal issues
 
 After purchasing and installing my i7-4790k, CPU temperatures were off the charts. Loading more than one core with processes skyrocketed temps to nearly 100&deg;C. The case and cooler fans would spin at max RPM trying to bring it under control.
 
@@ -126,13 +126,13 @@ One other thing I got wrong was how much thermal paste to use. It felt a bit sil
 
 After this, CPU temperature under load went down slightly. But the stock cooler still couldn't keep up.
 
-### <img class="ico" src="/MaterialDesign-SVG/svg/fan.svg" alt="Fan icon"> CPU Cooler: [Noctua NH-L12S](https://noctua.at/en/nh-l12s)
+## <img class="ico" src="/MaterialDesign-SVG/svg/fan.svg" alt="Fan icon"> CPU Cooler: [Noctua NH-L12S](https://noctua.at/en/nh-l12s)
 
 This was my most dubious and ambitious upgrade. I wanted to get a Noctua cooler since they are well-reputed for whisper-quiet fans. The smallest cooler [officially compatible with that CPU](https://noctua.at/en/cpu/Intel_Core_i7-4790K) was the NH-L12S, which would barely fit in the case. YouTube user The_Chad uploaded a video [showcasing their Optiplex SFF upgrade](https://www.youtube.com/watch?v=rTILMvzbFnc) with a Noctua L9x65 and i7-4790. This convinced me that it was doable and I ordered the cooler.
 
 ![Noctua NH-L12S box](noctua_nh-l12s.jpg)
 
-#### Mounting
+### Mounting
 
 I realized I'd made a big miscalculation after unboxing the Noctua cooler. The stock cooler doesn't use a standard mounting system. Four long screws screw into threaded standoffs on a metal panel behind the motherboard.
 
@@ -179,6 +179,6 @@ I had to remove a few things to fit it in the case, but they weren't that import
 With this cooler installed, the hottest my CPU's gotten is 62&deg;C under full load for a few hours.
 I'm still figuring out airflow but it seems fine so far with the side panel on.
 
-### What's next?
+## What's next?
 
 I've fit in almost all the upgrades possible. The only thing left is to eliminate noise coming from the fans. The Noctua cooler fan is already whisper quiet. I've replaced the case fan with an [NF-A8 PWM](https://noctua.at/en/nf-a8-pwm/specification). I'm still waiting on the iglide bearings to quiet down the [noisy gpu fan](#noisy-fan). I've yet to look at the PSU or NVMe adapter card fans. Stay tuned!

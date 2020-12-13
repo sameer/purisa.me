@@ -20,19 +20,19 @@ ProtonMail has served me well. But those two years are up now, and after re-eval
 
 Below is how I migrated:
 
-### Custom Domain
+## Custom Domain
 
 This part was pretty painless. Fastmail gives provider-specific instructions for how to add their records. Interestingly, [DKIM](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) did not require a key pair [like it does for ProtonMail](https://protonmail.com/blog/dkim-key-management/).
 
 ![Instructions for custom domain registration](cf.png)
 
-### Transferring Mail
+## Transferring Mail
 
-#### Exporting from ProtonMail
+### Exporting from ProtonMail
 
 Recently, ProtonMail released the [Import-Export app](https://protonmail.com/blog/import-export-app-release/). I used it to export my mail folders in `.mbox` format.
 
-#### Importing to Fastmail
+### Importing to Fastmail
 
 Fastmail supports importing mail from popular hosted providers and IMAP servers directly from the browser.
 
@@ -49,7 +49,7 @@ After installing Thunderbird, I configured IMAP [following Fastmail's instructio
 
 I created a local folder called "ProtonMail", and right clicking on that folder, selected `ImportExportTools NG > Import mbox file > Import directly one or more mbox files > <pick mbox files> > Open`. Now I had all my old mail from ProtonMail in Thunderbird. All that was left was to select all the messages, drag, and drop them into the equivalent Fastmail folders. Simple as that!
 
-#### Android App
+### Android App
 
 In terms of functionality, the Fastmail app is far superior than other mail apps I've used. It appears to have feature parity with the website. What would be 5 separate Google apps is packed into a single app. Yet it doesn't feel overcrowded.
 
