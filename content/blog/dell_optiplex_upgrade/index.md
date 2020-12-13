@@ -177,4 +177,4 @@ I had to remove a few things to fit it in the case, but they weren't that import
     * This means the case can't be locked shut, but I can still close the side panel and hold it shut with a sliver of tape
 
 With this cooler installed, the hottest my CPU's gotten is 62&deg;C under full load for a few hours.
-I'm still figuring out airflow but it seems fine so far with the side panel on.
+I'm still figuring out airflow but it seems fine so far with the side panel on. The case fan has an annoying hum so I've replaced it with an [NF-A8 PWM](https://noctua.at/en/nf-a8-pwm).
