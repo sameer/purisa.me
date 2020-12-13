@@ -181,4 +181,4 @@ I'm still figuring out airflow but it seems fine so far with the side panel on.
 
 ## What's next?
 
-I've fit in almost all the upgrades possible. The only thing left is to eliminate noise coming from the fans. The Noctua cooler fan is already whisper quiet. I've replaced the case fan with an [NF-A8 PWM](https://noctua.at/en/nf-a8-pwm/specification). I'm still waiting on the iglide bearings to quiet down the [noisy gpu fan](#noisy-fan). I've yet to look at the PSU or NVMe adapter card fans. Stay tuned!
+I've fit in almost all the upgrades possible. The only thing left is to eliminate noise coming from the fans. The CPU cooler fan is already whisper quiet, and I've replaced the case fan with an [NF-A8 PWM](https://noctua.at/en/nf-a8-pwm/specification). I'm waiting on the iglide bearings to quiet down the [noisy gpu fan](#noisy-fan). I haven't looked into replacing the PSU or NVMe adapter card fans yet. Stay tuned!
