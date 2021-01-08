@@ -23,6 +23,9 @@ Want to chat? You can reach by email at <span class="begone-scrapers">em.asirup@
     <li>Python
         <img src="python.svg" class="ico">
     </li>
+    <li>Groovy
+        <img src="groovy-logo-black.svg" class="ico">
+    </li>
     <li>Mathematica
         <img src="mathematica.svg" class="ico">
     </li>
