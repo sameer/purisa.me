@@ -33,8 +33,7 @@ I tried motor oil and mineral oil, but they only made things worse 😞.
 
 My plan now is to replace the bearings with [igus iglide J sleeve bearings (JSM-0205-02)](https://www.igus.com/product/3). They have the same dimensions as MR52ZZ bearings and won't make any noise.
 
-![igus iglide J](igus_iglide_j.jpg)
-*igus GmbH*
+![left: MR52ZZ, right: igus iglide JSM-0205-02](bearing_comparison.jpg)
 
 ## <img class="ico" src="/MaterialDesign-SVG/svg/expansion-card-variant.svg" alt="SSD icon"> [Samsung EVO 970 500GB](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-970-evo-nvme-m2-500gb-mz-v7e500bw/)
 
