@@ -3,37 +3,18 @@ title = "About Me"
 template = "page.html"
 +++
 
-I'm Sameer, a software development engineer at Amazon. Much of my free time goes towards my FPGA projects. FPGA development has a class of problems not found in software development, but that challenge is what makes it a rewarding hobby! Technical things aside, I also enjoy gardening, hiking, and cooking.
+Hey there! :wave:
 
-Want to chat? You can reach by email at <span class="begone-scrapers" aria-label="s a m e e r at p u r i s a dot m e">em.asirup@reemas</span>
+I'm Sameer Puri. I work at Amazon Music as a software development engineer. Much of my free time goes towards my hobby software/hardware projects. FPGA development is often a part of those! Technical things aside, I also enjoy reading, growing houseplants, and hiking.
 
-### Languages I typically use
+### Social
 
-<ul>
-    <li>Rust
-        <img src="rust.svg" class="ico">
-    </li>
-    <li>Java
-        <img src="java.svg" class="ico">
-    </li>
-    <li>
-        SystemVerilog
-        <img src ="system_verilog.svg" class="ico">
-    </li>
-    <li>Python
-        <img src="python.svg" class="ico">
-    </li>
-    <li>Groovy
-        <img src="groovy-logo-black.svg" class="ico">
-    </li>
-    <li>Mathematica
-        <img src="mathematica.svg" class="ico">
-    </li>
-    <li>Go
-        <img src="go.svg" class="ico">
-    </li>
-</ul>
-<br>
+Want to chat? You can reach me by email at <span class="begone-scrapers" aria-label="s a m e e r at p u r i s a dot m e">em.asirup@reemas</span>
+
+* [GitHub](https://github.com/sameer/)
+* [Goodreads](https://www.goodreads.com/user/show/110767968-sameer)
+* [YouTube](https://www.youtube.com/channel/UCkFtvOBRvNRRM3aRlhR--pg/featured)
+
 
 ### Noteworthy Public Projects
 * [MIPI Camera Video Capture over MIPI D-PHY](https://github.com/hdl-util/mipi-csi-2)
@@ -47,3 +28,39 @@ Want to chat? You can reach by email at <span class="begone-scrapers" aria-label
 * [Take a Number: Queueing system for Vanderbilt Teaching Assistants](https://github.com/take-a-number/frontend)
 * [LRAD: A secure update framework](https://github.com/sameer/lrad)
 * [This Site](https://github.com/sameer/purisa.me)
+
+### Languages I typically use
+
+<ul>
+    <li>Rust
+        <img src="rust.svg" class="ico">
+    </li>
+    <li>Java
+        <img src="java.svg" class="ico">
+    </li>
+    <ul>
+        <li>Kotlin
+            <img src="kotlin.svg" class="ico">
+        </li>
+        <li>Groovy
+            <img src="groovy-logo-black.svg" class="ico">
+        </li>
+    </ul>
+    <li>
+        SystemVerilog
+        <img src ="system_verilog.svg" class="ico">
+    </li>
+    <li>Python
+        <img src="python.svg" class="ico">
+    </li>
+    <li>Typescript
+        <img src="typescript.svg" class="ico">
+    </li>
+    <li>Go
+        <img src="go.svg" class="ico">
+    </li>
+    <li>Mathematica
+        <img src="mathematica.svg" class="ico">
+         (I'm a bit rusty!)
+    </li>
+</ul>
