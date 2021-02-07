@@ -102,3 +102,5 @@ The address of a value in DRAM consists of three parts: a bank address, a row ad
 I've successfully stored data in the DRAM and read it back for displaying over HDMI. However, I haven't been able to store the captured video in the SDRAM yet. I tried but the unintelligible pixel jittering is still present. It's likely that I missed a minor detail that, once fixed, will make it magically work.
 
 It may yet be a month more before things are working. Stay tuned!
+
+Edit: RAW8 image transfer with an OV5647 works. Check it out in the demo repository on GitHub: [hdl-util/mipi-demo](https://github.com/hdl-util/mipi-demo)
