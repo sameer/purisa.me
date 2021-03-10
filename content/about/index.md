@@ -14,7 +14,7 @@ Want to chat? You can reach me by email at <span class="begone-scrapers" aria-la
 * [GitHub](https://github.com/sameer/)
 * [Goodreads](https://www.goodreads.com/user/show/110767968-sameer)
 * [YouTube](https://www.youtube.com/channel/UCkFtvOBRvNRRM3aRlhR--pg/featured)
-
+* [LinkedIn](https://linkedin.com/in/purisame)
 
 ### Noteworthy Public Projects
 * [MIPI Camera Video Capture over MIPI D-PHY](https://github.com/hdl-util/mipi-csi-2)
