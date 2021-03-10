@@ -6,4 +6,11 @@
         <img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
     </h3>
     {{ page.content | safe }}
+    <script src="https://utteranc.es/client.js"
+        repo="sameer/purisa.me"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
 {% endblock content %}
