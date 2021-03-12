@@ -98,6 +98,12 @@ The [i5-4590](https://ark.intel.com/content/www/us/en/ark/products/80815/intel-c
 
 The [i7-5775C](https://ark.intel.com/content/www/us/en/ark/products/88040/intel-core-i7-5775c-processor-6m-cache-up-to-3-70-ghz.html) was an interesting option because of its [128MB eDRAM L4 cache](https://en.wikipedia.org/wiki/EDRAM). It seems that it's [useful for rendering](https://www.anandtech.com/show/16195/a-broadwell-retrospective-review-in-2020-is-edram-still-worth-it) and [Monero mining](https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md#choose-value-for-low_power_mode) but I'm doing neither.
 
+**Update**: although the Broadwell chips i5-5675C and i7-5775C fit in an LGA1150 socket, the motherboard must have a Q97/H97 chipset! Quoting [directly from CPU world](https://www.cpu-world.com/Sockets/Socket_1150_LGA1150_H3.html):
+
+> Please note that only 9-series chipsets, H97 and Z97, support Broadwell i5-5xxx and i7-5xxx unlocked CPUs.
+
+The Optiplex 7020 [only has a Q87](https://i.dell.com/sites/csdocuments/Business_smb_merchandizing_Documents/en/us/Dell-OptiPlex-7020-Technical-Spec-Sheet-FINAL.pdf) so it does NOT support it. Good thing I didn't get one! :sweat_smile:
+
 ### Thermal issues
 
 After purchasing and installing my i7-4790k, CPU temperatures were off the charts. Loading more than one core with processes skyrocketed temps to nearly 100&deg;C. The case and cooler fans would spin at max RPM trying to bring it under control.

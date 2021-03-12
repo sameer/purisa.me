@@ -55,7 +55,7 @@ th:not(:first-child), td:not(:first-child) {
 }
 
 .footnote-definition, blockquote, details {
-    border: 1px solid silver;
+    border-left: 5px solid silver;
     padding: 10px;
     margin-bottom: 5px;
 }
