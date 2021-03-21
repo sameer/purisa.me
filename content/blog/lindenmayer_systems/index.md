@@ -2,6 +2,8 @@
 title = "Lindenmayer Systems"
 date = 2019-04-21T21:31:13-05:00
 description = "A brief overview of L-systems and how they represent intricate patterns concisely."
+[taxonomies]
+tags = ["theory"]
 +++
 
 While playing with extensions in Inkscape, I ran into [Tavmjong Bah's detailed breakdown of the Render Extensions](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Extensions-Render.html). It got me really interested in Lindenmayer systems, which are formal grammars based on string rewriting. An L-system begins with an initial state called the axiom. Its terms (characters in a string) are iteratively replaced using a set of rules. There are two types of terms: constants which replace themselves (identity function) and variables which are replaced by a sequence of one or more terms. The system is run for a set number of iterations and can grow quite quickly.

@@ -2,6 +2,8 @@
 title = "Elephant bush succulent"
 date = 2020-05-17T10:36:00-04:00
 description = "A little water and sunshine goes a long way!"
+[taxonomies]
+tags = ["gardening"]
 +++
 
 I bought a wilting succulent the other day from a home improvement store to see if it could be revived.

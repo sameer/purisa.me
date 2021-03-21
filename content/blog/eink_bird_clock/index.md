@@ -2,6 +2,8 @@
 title = "Kindle DX Graphite as an E Ink Clock"
 date = 2020-06-14T12:28:00-04:00
 description = "Recreating my broken songbird clock as a digital smart clock."
+[taxonomies]
+tags = ["rust", "hardware"]
 +++
 
 Last summer, I bought a used [Kindle DX Graphite](https://en.wikipedia.org/wiki/Amazon_Kindle#Kindle_DX_Graphite):

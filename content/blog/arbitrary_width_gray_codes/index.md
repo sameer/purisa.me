@@ -2,18 +2,20 @@
 title = "Generating gray codes of arbitrary width"
 date = 2020-05-23T19:20:36-04:00
 description = "One-liner gray code conversion implemented in SystemVerilog."
+[taxonomies]
+tags = ["fpga", "theory"]
 +++
 
 A [gray code](https://en.wikipedia.org/wiki/Gray_code) is an encoding of an n-bit unsigned number, such that adding one or subtracting one only changes a single bit:
 
-$  n \in \mathbf{Z^+} \\\\
+$$  n \in \mathbf{Z^+} \\\\
     x \in [0,1,\dots,2^n) \\\\
     i \in [0,1,\dots,n) \\\\
     \begin{aligned}
         gray(x) \oplus gray(x + 1 \bmod 2^n) = 2^i \\\\
         gray(x - 1 \bmod 2^n) \oplus gray (x) = 2^i \\\\
     \end{aligned}
-$
+$$
 
 Here's an example of a two-bit gray code:
 
@@ -60,7 +62,7 @@ Now that we've considered a use case for gray code, how do you make a coding? Yo
 
 The easiest method to understand is generating by repeated reflection:
 
-$ n \in \mathbb{Z^+} \\\\
+$$ n \in \mathbb{Z^+} \\\\
 x_i \in [0, 1] \\\\
 X \in [0,1,\dots,2^n) \\\\
 X = [x_0, x_1, \dots, x_{n-1}] \\\\
@@ -69,17 +71,17 @@ grayBit(x_i) := \begin{cases}
     x_i &\text{if } X \bmod 2^{i+2} \lt 2^{i+1} \\\\
     1 - x_i &\text{otherwise}
 \end{cases}
-$
+$$
 
 In simpler terms:
 
-$ gray(X) := X \oplus (X \gg 1) \\\\
-$
+$$ gray(X) := X \oplus (X \gg 1) \\\\
+$$
 
 With an inverse function of:
 
-$ degray(X) := \bigoplus_{j = 0}^{n} X \gg j\\\\
-$
+$$ degray(X) := \bigoplus_{j = 0}^{n} X \gg j\\\\
+$$
 
 In just a few lines, you can describe a gray code valid for arbitrary width with O(n) run time, taking O(1) space.
 The implementation in SystemVerilog is [available on GitHub](https://github.com/hdl-util/gray-code).

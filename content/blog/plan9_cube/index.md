@@ -2,6 +2,8 @@
 title = "2D Rendering of the Plan 9 Palette Cube"
 date = 2018-12-29T20:25:54-05:00
 description = "Showing the colors of the Plan 9 Palette Cube in a grid for visual understanding."
+[taxonomies]
+tags = ["golang"]
 +++
 
 I couldn't find a good, public domain image that shows what the Plan 9 palette should look like, so I decided to create one.

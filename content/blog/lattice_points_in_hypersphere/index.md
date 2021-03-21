@@ -2,6 +2,8 @@
 title = "Enumerating Lattice Points in a Hypersphere"
 date = 2019-05-15T16:26:41-04:00
 description = "An intuitive algorithm for the task."
+[taxonomies]
+tags = ["theory"]
 +++
 
 ### Definitions

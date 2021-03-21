@@ -2,6 +2,8 @@
 title = "Switching from ProtonMail to Fastmail"
 date = 2020-12-05T10:30:00-05:00
 description = "Documenting my motivations for switching email providers, the steps involved, and first reactions."
+[taxonomies]
+tags = ["email"]
 +++
 
 In 2018, I decided to start using my own domain name for email.

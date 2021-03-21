@@ -3,6 +3,8 @@ title = "Re: You should read this"
 date = 2021-03-18T21:58:20-04:00
 description = "The tale of a malicious Excel macro"
 draft = true
+[taxonomies]
+tags = ["email"]
 +++
 
 ## Background

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tags</h1>
+
+{% for tag in terms %}
+    <a href="{{ tag.permalink }}" class="post-tag"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon">{{ tag.name }}</a>
+{% endfor %}
+
+
+{% for tag in terms %}
+<h2 id="{{ tag.name }}">{{ tag.name }}</h2>
+{% for page in tag.pages %}
+<article>
+        <header>
+            <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            <img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read <img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
+        </header>
+</article>
+{% endfor %}
+{% endfor %}
+
+
+{% endblock content %}

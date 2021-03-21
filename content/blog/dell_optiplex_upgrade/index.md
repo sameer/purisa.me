@@ -2,6 +2,8 @@
 title = "Upgrading my Dell Optiplex 7020"
 date = 2020-12-11T06:15:00-05:00
 description = "Retrofitting an older desktop PC and all the challenges involved."
+[taxonomies]
+tags = ["hardware", "computers"]
 +++
 
 Back in February, I bought a Dell Optiplex 7020 SFF. It fits in a carry-on bag, but it's big enough that I've been able to install some much-needed upgrades.
@@ -178,7 +180,7 @@ I had to remove a few things to fit it in the case, but they weren't that import
   * Didn't want to snap the tab off so I've temporarily removed the drive
 * Case close mechanism
   * The CPU heatpipes prevent the case from opening and closing properly
-    * I tried all four positions, but there wasn't room for it to close/open
+    * I tried all four orientations but there wasn't room for it to close/open :cry:
   * Removed it by pushing in the mechanism from the locking tab on the back of the case, pushing in the plastic tab holding the mechanism in the metal railing, and then unhooking the spring
     * This means the case can't be locked shut, but I can still close the side panel and hold it shut with a sliver of tape
 

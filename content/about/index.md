@@ -12,10 +12,12 @@ I'm Sameer Puri. I work at Amazon Music as a software development engineer. Much
 
 Want to chat? You can reach me by email at <span class="begone-scrapers" aria-label="s a m e e r at p u r i s a dot m e">em.asirup@reemas</span>
 
-* [GitHub](https://github.com/sameer/)
-* [Goodreads](https://www.goodreads.com/user/show/110767968-sameer)
-* [YouTube](https://www.youtube.com/channel/UCkFtvOBRvNRRM3aRlhR--pg/featured)
-* [LinkedIn](https://linkedin.com/in/purisame)
+[GitHub<img src="/MaterialDesign-SVG/svg/github.svg" class="ico">](https://github.com/sameer/)
+[Goodreads<img src="/MaterialDesign-SVG/svg/goodreads.svg" class="ico">](https://www.goodreads.com/user/show/110767968-sameer)
+[Wikipedia<img src="/MaterialDesign-SVG/svg/wikipedia.svg" class="ico">](https://en.wikipedia.org/w/index.php?target=Purisame&namespace=all&tagfilter=&start=&end=&limit=50&title=Special%3AContributions)
+[YouTube<img src="/MaterialDesign-SVG/svg/youtube.svg" class="ico">](https://www.youtube.com/channel/UCkFtvOBRvNRRM3aRlhR--pg/featured)
+[LinkedIn<img src="/MaterialDesign-SVG/svg/linkedin.svg" class="ico">](https://linkedin.com/in/purisame)
+
 
 ### Noteworthy Public Projects
 * [MIPI Camera Video Capture over MIPI D-PHY](https://github.com/hdl-util/mipi-csi-2)

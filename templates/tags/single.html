@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ section.title }}</h1>
-{% for page in section.pages %}
+<h1 id="{{ term.name }}">Posts with <img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ term.name }}</h1>
+<a href="/tags"><img class="ico" src="/MaterialDesign-SVG/svg/arrow-up.svg" alt="Arrow up icon">Other tags</a>
+{% for page in term.pages %}
 <article>
         <header>
             <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
             <img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read <img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
-            {% if page.taxonomies.tags %}<br>{% for tag in page.taxonomies.tags %} <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="post-tag"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag }}</a>{% endfor %}{% endif %}
         </header>
         {% if page.description %}<br><span>{{ page.description }}</span>{% endif %}
 </article>
