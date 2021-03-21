@@ -25,7 +25,7 @@
 	<meta name="msapplication-navbutton-color" content="#000000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="author" content="Sameer Puri">
-	<meta name="description" content="Sameer Puri's personal island in the seas of the interwebs. Come visit!">
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{% block description %}Sameer Puri's personal island in the seas of the interwebs. Come visit!{% endblock description %}{% endif %}">
 </head>
 
 <body>

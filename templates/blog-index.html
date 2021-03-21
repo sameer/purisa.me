@@ -6,6 +6,7 @@
     {% for page in section.pages %}
     <li>
             <a href="{{ page.permalink }}">{{ page.title }}</a>
+            {% if page.description %}<br><span>{{ page.description }}</span>{% endif %}
             <br>
             <img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read <img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
     </li>

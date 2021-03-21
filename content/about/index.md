@@ -1,6 +1,7 @@
 +++
 title = "About Me"
 template = "page.html"
+description = "A little bit about me, what I do, and how to reach me."
 +++
 
 Hey there! :wave:
