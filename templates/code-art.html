@@ -1,11 +1,9 @@
 {% extends "base.html" %} {% block title %}Code Art Gallery{% endblock %}
 
 {% block content %} 
-<h1>Gallery (click to view full-size)
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-        <img class="adjacent-text" alt="Creative Commons License" style="border-width:0" src="/CC-BY-SA_icon.svg" decoding="sync" />
-    </a>
-</h1>
+<h1>Gallery <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" class="ico" src="/CC-BY-SA_icon.svg" decoding="sync" /></a></h1>
+Click on artwork to view it in full size.
+
 {% for asset in page.assets %}
     {% set meta = get_image_metadata(path=asset) %}
     {% set desc = asset | replace(from = "code-art/", to = "") | replace(from = ".png", to = "") %}
@@ -31,7 +29,6 @@
     <h2>No art yet, check back later!</h2>
 {% endfor %}
 <br>
-<b>All works on this page are licensed under the
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
-</b>
+
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">Code Art</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://purisa.me" property="cc:attributionName" rel="cc:attributionURL">Sameer Puri</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 {% endblock content %}
