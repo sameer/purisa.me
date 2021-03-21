@@ -1,6 +1,7 @@
 +++
 title = "HDMI output on an FPGA"
 date = 2019-07-18T19:11:13-07:00
+description = "How I tackled HDMI output from the ground up as my first major FPGA development project."
 +++
 
 ## Introduction

@@ -180,7 +180,8 @@ textarea,input[type=text]{
 @media(min-width:1310px){
     .container{
         margin:auto;
-        width:1270px
+        // Line width on most IDEs
+        max-width: 85ch;
     }
 }
 

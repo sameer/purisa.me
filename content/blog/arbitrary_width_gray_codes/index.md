@@ -1,6 +1,7 @@
 +++
 title = "Generating gray codes of arbitrary width"
 date = 2020-05-23T19:20:36-04:00
+description = "One-liner gray code conversion implemented in SystemVerilog."
 +++
 
 A [gray code](https://en.wikipedia.org/wiki/Gray_code) is an encoding of an n-bit unsigned number, such that adding one or subtracting one only changes a single bit:
@@ -94,4 +95,4 @@ I think this could improve metastability handling for a FIFO where one clock is 
 
 More discussion and helpful research papers about this are [in issue #1 of hdl-util/gray-code on GitHub](https://github.com/hdl-util/gray-code/issues/1).
 
-This might be a suitable problem for the [Z3 theorem provder](https://github.com/Z3Prover/z3) to handle.
+This might be a suitable problem for the [Z3 theorem prover](https://github.com/Z3Prover/z3) to handle.

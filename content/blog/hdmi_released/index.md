@@ -1,6 +1,7 @@
 +++
 title = "Minimal HDMI for FPGAs Released"
 date = 2020-04-24
+description = "Celebrating the first stable release of the project with a recap, discussion of changes, and what's next."
 +++
 
 Last summer, I started working on a [general purpose HDMI implementation for FPGAs](@/blog/hdmi_on_fpga/index.md). Things have come a long way since then. After being [featured on HackerNews](https://news.ycombinator.com/item?id=22279308), the [GitHub repository](https://github.com/hdl-util/hdmi/) now has over 200 stars. There are several features I've implemented since my last post which I'll discuss below.

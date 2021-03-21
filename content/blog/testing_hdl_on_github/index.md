@@ -1,6 +1,7 @@
 +++
 title = "Testing HDL on GitHub with Github Actions"
 date = 2021-02-06T22:58:20-05:00
+description = "How I do continuous on all FPGA libraries in the hdl-util organization."
 +++
 
 Many large open-source software projects use automated processes for examining code.

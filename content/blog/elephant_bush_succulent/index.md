@@ -1,6 +1,7 @@
 +++
 title = "Elephant bush succulent"
 date = 2020-05-17T10:36:00-04:00
+description = "A little water and sunshine goes a long way!"
 +++
 
 I bought a wilting succulent the other day from a home improvement store to see if it could be revived.
@@ -15,4 +16,4 @@ It's been sitting in my west-facing window for a few days soaking up the sun and
 
 ![Succulent a few days after watering, showing new growth](after_a_week.jpg)
 
-Hopefully I can propagate it in a few weeks.
+Hopefully I can propagate it in a few weeks. :potted_plant:

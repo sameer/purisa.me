@@ -1,6 +1,7 @@
 +++
 title = "Upgrading my Dell Optiplex 7020"
 date = 2020-12-11T06:15:00-05:00
+description = "Retrofitting an older desktop PC and all the challenges involved."
 +++
 
 Back in February, I bought a Dell Optiplex 7020 SFF. It fits in a carry-on bag, but it's big enough that I've been able to install some much-needed upgrades.

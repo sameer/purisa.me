@@ -1,6 +1,7 @@
 +++
 title = "Interfacing FPGAs with MIPI Cameras"
 date = 2020-05-16T02:50:39-04:00
+description = "A quick progress update on my project to do MIPI camera control and video reception from scratch with an FPGA."
 +++
 
 The FPGA board I'm using has a bunch of peripherals and I've been writing SystemVerilog code to support them one by one. I posted about my [HDMI work](/blog/hdmi-on-fpga/) before, which has since reached maturity. The next step was naturally video input. It's been a long journey and there's still more to be done!
