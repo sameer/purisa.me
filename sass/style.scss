@@ -73,6 +73,10 @@ blockquote {
     margin-bottom: 5px;
 }
 
+details > summary {
+    cursor: pointer;
+}
+
 .footnote-definition > p {
     display: inline;
 }
@@ -120,6 +124,14 @@ h1,h2 {
     border-bottom: 1px solid silver;
 }
 
+h2 > a, a.post-tag {
+    text-decoration: none;
+}
+
+h2 > a:hover, a.post-tag:hover {
+    text-decoration: underline;
+}
+
 a.zola-anchor {
     display: inline-block;
     margin-left: 1ex;
@@ -128,8 +140,12 @@ a.zola-anchor {
     color: transparent;
 }
 
+:target > a.zola-anchor {
+    color: inherit;
+}
+
 h2:hover > a.zola-anchor, h3:hover > a.zola-anchor, h4:hover > a.zola-anchor {
-    color: #fff ;
+    color: inherit;
 }
 
 /* Copyright 2014 Owen Versteeg; MIT licensed */
