@@ -389,7 +389,7 @@ country:        BG
 
 Three different hosting providers in three different countries. No luck here.
 Then I thought to check open ports with [nmap](https://en.wikipedia.org/wiki/Nmap) and noticed that the Russian and Bulgarian servers had an HTTPS port open.
-Both were using the same expired [SSL certificate](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/) for a one cdnmetrics.com.
+Both were using the same expired [SSL certificate](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/) for cdnmetrics.com.
 The trail went cold from there.
 
 ## Debrief
