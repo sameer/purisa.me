@@ -14,7 +14,7 @@ It was one of my most challenging projects yet and I learned a lot from it.
 
 Along the way I had the chance to contribute to the Linux kernel.
 There's this [V4L2](https://en.wikipedia.org/wiki/Video4Linux) driver for the IMX219 camera module
-that configures it over I2C[^6].
+that configures it over I2C.
 While trying to understand the code I noticed that there
 were two redundant register writes.
 It wasn't a big deal but I submitted a patch to remove them.
