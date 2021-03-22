@@ -55,7 +55,7 @@ The attachment is a ZIP archive containing an Excel document:
 
 ![Screenshot of Excel document](excel.jpg)
 
-:rotating_light: *Virus* alert[^3] :rotating_light:
+### :rotating_light: *Virus* alert[^3] :rotating_light:
 
 Aside from misspelling button as *bytton* and the all around poor grammar,
 an Excel document that asks you to enable editing is a sure sign of a macro attack.
