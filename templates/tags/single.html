@@ -2,7 +2,8 @@
 
 {% block content %}
 <h1 id="{{ term.name }}"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ term.name }}</h1>
-<a href="/tags"><img class="ico" src="/MaterialDesign-SVG/svg/arrow-up.svg" alt="Arrow up icon">Other tags</a>
+{{ term.pages | length }} {% if term.pages | length == 1 %}post{% else %}posts{% endif %} under this tag.
+<span><a href="/tags"><img class="ico" src="/MaterialDesign-SVG/svg/arrow-up.svg" alt="Arrow up icon">Other tags</a></span>
 {% for page in term.pages %}
 <article>
         <header>
