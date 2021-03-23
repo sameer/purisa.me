@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 id="{{ term.name }}">Posts with <img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ term.name }}</h1>
+<h1 id="{{ term.name }}"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ term.name }}</h1>
 <a href="/tags"><img class="ico" src="/MaterialDesign-SVG/svg/arrow-up.svg" alt="Arrow up icon">Other tags</a>
 {% for page in term.pages %}
 <article>
         <header>
             <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-            <img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read <img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}
+            <div class="post-information">
+                <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read</span>
+                <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}</span>
+            </div>
         </header>
-        {% if page.description %}<br><span>{{ page.description }}</span>{% endif %}
+        {% if page.summary %}
+        <br>{{ page.summary | safe }}
+        <a href="{{ page.permalink }}">Continue reading</a>
+        {% elif page.description %}<br><span>{{ page.description }}</span>{% endif %}
 </article>
 {% endfor %}
 {% endblock content %}

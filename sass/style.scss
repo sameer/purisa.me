@@ -12,6 +12,18 @@
     -ms-user-select: none;
 }
 
+.post-information {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 0.5em;
+}
+
+.tags {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 0.5em;
+}
+
 .utterances {
     position: inherit;
     margin-left: initial;

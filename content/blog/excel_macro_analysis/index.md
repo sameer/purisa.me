@@ -3,7 +3,7 @@ title = "Re: You should look at this"
 date = 2021-03-22T00:22:34-04:00
 description = "The tale of a malicious Excel macro."
 [taxonomies]
-tags = ["email"]
+tags = ["email", "malware"]
 +++
 
 ## Background
