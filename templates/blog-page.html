@@ -2,7 +2,6 @@
 
 {% block content %}
     <h1>{{ page.title }}</h1>
-    {% if page.description %}<h3>{{ page.description }}</h3>{% endif %}
     <div class="post-information">
         <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read</span>
         <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}</span>
@@ -14,6 +13,7 @@
             {% endif %}
         </div>
     </div>
+    {% if page.description %}<h3>{{ page.description }}</h3>{% endif %}
     {{ page.content | safe }}
     <h2 id="comments">Comments<a class="zola-anchor" href="#comments" aria-label="Anchor link for: comments">&#x1F517;</a></h2>
     <script src="https://utteranc.es/client.js"
