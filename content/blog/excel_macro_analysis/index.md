@@ -88,7 +88,7 @@ Learning about this kind of attack was interesting, but I still had one burning 
 *what does this workbook actually do?* Finding the answers would take time.
 I have no background in analyzing malicious code and this was a great opportunity to dive right in! :slightly_smiling_face:
 
-### Detective work :detective:
+### :detective: Detective work
 
 Before examining the macro, I thought it might be interesting to look at various sources of metadata to get info on the creator.
 Philippe Lagadec's [oletools](https://github.com/decalage2/oletools), a collection of tools written in Python for analyzing Microsoft office files, were exactly what I needed. Here are the file's properties:
@@ -308,7 +308,7 @@ It's represented as the decimal number of days since 1 January 1900.
 |--|--|--|--|
 |sheet1|AO262|NOW() &".dat"|44276.7967810764.dat|
 
-#### Payload acquired :dart:
+#### :dart: Payload acquired
 
 A0272 to A0277 use HERTY -- a custom function that downloads files by URL.
 Replacing the cell references reveals those URLs:
@@ -346,7 +346,7 @@ This shed some light on the end goal. The payload is a [DLL](https://techterms.c
 These cells are obfuscated to avoid detection by heuristic virus scanners.
 More complex scanners evaluating the worksheet in a sandbox might overlook this because of FORMULA.FILL.
 
-#### Running the Payload :bomb:
+#### :bomb: Running the Payload
 
 X213 through X215 look painful but are just another case of obfuscation.
 
@@ -397,4 +397,4 @@ The trail went cold from there.
 
 ## Debrief
 
-Analyzing this Excel macro was a fun project overall, but the attacker's goal remains a mystery. Oddly enough I find myself hoping for more spam to come my way. I'm ready for round 2! :man_technologist: :fist_right: :robot:
+Analyzing this Excel macro was a fun project overall, but the attacker's goal remains a mystery. Oddly enough I find myself hoping for more spam to come my way. I'm ready for round 2!
