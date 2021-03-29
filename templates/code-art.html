@@ -16,7 +16,7 @@ Click on artwork to view it in full size.
                 <source media="(min-width: 512px)" srcset='{{ resize_image(path=asset, width=640, op="fit_width") }}'>
                 <source media="(min-width: 256px)" srcset='{{ resize_image(path=asset, width=320, op="fit_width") }}'>
                 <source media="(min-width: 128px)" srcset='{{ resize_image(path=asset, width=160, op="fit_width") }}' >
-                <img src="{{ get_url(path=asset) }}" alt="{{ desc }}">
+                <img src="{{ get_url(path=asset) }}" alt="{{ desc }}" loading="lazy">
             </picture>
         </a>
         <figcaption>
