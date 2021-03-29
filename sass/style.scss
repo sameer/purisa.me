@@ -12,13 +12,7 @@
     -ms-user-select: none;
 }
 
-.post-information {
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 0.5em;
-}
-
-.tags {
+.tags, .post-information, .social {
     display: flex;
     flex-flow: row wrap;
     column-gap: 0.5em;
