@@ -130,11 +130,11 @@ h1,h2 {
     border-bottom: 1px solid silver;
 }
 
-h2 > a, a.post-tag {
+h2 > a, a.tag {
     text-decoration: none;
 }
 
-h2 > a:hover, a.post-tag:hover {
+h2 > a:hover, a.tag:hover {
     text-decoration: underline;
 }
 
