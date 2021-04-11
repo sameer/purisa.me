@@ -127,7 +127,12 @@ img.ico, img.adjacent-text {
 }
 
 h1,h2 {
-    border-bottom: 1px solid silver;
+    border-bottom: 1px dotted silver;
+}
+
+footer {
+    border-top: 1px dotted silver;
+    padding: 10px;
 }
 
 h2 > a, a.tag {
