@@ -1,7 +1,7 @@
 +++
 title = "Testing HDL on GitHub with Github Actions"
 date = 2021-02-06T22:58:20-05:00
-description = "How I do continuous testing on all FPGA libraries in the hdl-util organization."
+description = "How I automatically run tests on all FPGA libraries in the hdl-util organization."
 [taxonomies]
 tags = ["fpga"]
 +++
