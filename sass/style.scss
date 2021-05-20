@@ -135,11 +135,11 @@ footer {
     padding: 10px;
 }
 
-h2 > a, a.tag {
+h2.post-title > a, a.tag {
     text-decoration: none;
 }
 
-h2 > a:hover, a.tag:hover {
+h2.post-title > a:hover, a.tag:hover {
     text-decoration: underline;
 }
 
