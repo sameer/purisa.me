@@ -35,36 +35,11 @@ Want to chat? You can reach me by email at <span class="begone-scrapers" aria-la
 
 ### Languages I typically use
 
-<ul>
-    <li>Rust
-        <img src="rust.svg" class="ico">
-    </li>
-    <li>Java
-        <img src="java.svg" class="ico">
-    </li>
-    <ul>
-        <li>Kotlin
-            <img src="kotlin.svg" class="ico">
-        </li>
-        <li>Groovy
-            <img src="groovy-logo-black.svg" class="ico">
-        </li>
-    </ul>
-    <li>
-        SystemVerilog
-        <img src ="system_verilog.svg" class="ico">
-    </li>
-    <li>Python
-        <img src="python.svg" class="ico">
-    </li>
-    <li>Typescript
-        <img src="typescript.svg" class="ico">
-    </li>
-    <li>Go
-        <img src="go.svg" class="ico">
-    </li>
-    <li>Mathematica
-        <img src="mathematica.svg" class="ico">
-         (I'm a bit rusty!)
-    </li>
-</ul>
+<div class="langs">
+    <span>Rust <img src="rust.svg" class="ico"></span>
+    <span>Java <img src="java.svg" class="ico"></span>
+    <span>Kotlin <img src="kotlin.svg" class="ico"></span>
+    <span>Typescript <img src="typescript.svg" class="ico"></span>
+    <span>Python <img src="python.svg" class="ico"></span>
+    <span>SystemVerilog <img src ="system_verilog.svg" class="ico"></span>
+</div>
