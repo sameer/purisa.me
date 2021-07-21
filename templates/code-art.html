@@ -6,17 +6,15 @@ Click on artwork to view it in full size.
 
 {% for asset in page.assets %}
     {% set meta = get_image_metadata(path=asset) %}
-    {% set desc = asset | replace(from = "code-art/", to = "") | replace(from = ".png", to = "") %}
+    {% set desc = asset | replace(from = "code-art/", to = "") | replace(from = "/", to = "") | replace(from = ".png", to = "") %}
     <figure>
         <a href="{{ get_url(path=asset) }}">
             <picture>
-                <source media="(min-width: 1536px)" srcset='{{ resize_image(path=asset, width=1920, op="fit_width") }}'>
-                <source media="(min-width: 1024px)" srcset='{{ resize_image(path=asset, width=1280, op="fit_width") }}'>
-                <source media="(min-width: 768px)" srcset='{{ resize_image(path=asset, width=960, op="fit_width") }}'>
-                <source media="(min-width: 512px)" srcset='{{ resize_image(path=asset, width=640, op="fit_width") }}'>
-                <source media="(min-width: 256px)" srcset='{{ resize_image(path=asset, width=320, op="fit_width") }}'>
-                <source media="(min-width: 128px)" srcset='{{ resize_image(path=asset, width=160, op="fit_width") }}' >
-                <img src="{{ get_url(path=asset) }}" alt="{{ desc }}" loading="lazy">
+                {% for width in [12, 8, 6, 4, 2, 1] %}
+                {% set image = resize_image(path=asset, width=160 * width, op="fit_width") %}
+                <source media="(min-width: {{ 128 * width }}px)" srcset='{{ image.url | safe }}' >
+                {% endfor %}
+                <img src="{{ get_url(path=asset) }}" alt="{{ desc }}">
             </picture>
         </a>
         <figcaption>
