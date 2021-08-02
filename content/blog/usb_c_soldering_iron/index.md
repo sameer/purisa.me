@@ -1,5 +1,5 @@
 +++
-title = "Pinecil a USB-C soldering iron"
+title = "Pinecil: a USB-C soldering iron"
 date = 2021-08-01T15:36:42-04:00
 description = "My thoughts on the Pinecil, a portable USB-C soldering iron"
 [taxonomies]
