@@ -1,13 +1,13 @@
 +++
 title = "Pinecil a USB-C soldering iron"
 date = 2021-08-01T15:36:42-04:00
-description = "About the Pinecil, a USB-C soldering iron way better than its competition"
+description = "My thoughts on the Pinecil, a portable USB-C soldering iron"
 [taxonomies]
-tags = ["electronics"]
+tags = ["hardware"]
 +++
 
-I finally received my [Pinecil](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/) soldering iron last week.
-It's a really good product so I think it's worth writing about.
+I finally received my [Pinecil soldering iron](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/) last week.
+It's a really good product so I thought it was worth writing about.
 
 
 ![Top view](pinecil_top.jpg)
@@ -18,10 +18,10 @@ It's a really good product so I think it's worth writing about.
 
 The Pinecil is a portable soldering iron powered by DC barrel jack or USB-C.
 Tip temperature can be accurately controlled after some calibration.
-The tips have integrated heating elements and can be easily swapped depending on your use case.
+The tips have integrated heating elements and are easy to swap.
 Some sort of [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit) controls screen orientation and ensures safety with automatic snooze + shutdown.
 
-Clearly, the Pinecil was heavily inspired by the TS100 which was [available even back in 2017](https://hackaday.com/2017/07/24/review-ts100-soldering-iron/):
+The Pinecil is heavily inspired by the TS100 which was around [even back in 2017](https://hackaday.com/2017/07/24/review-ts100-soldering-iron/):
 
 ![TS100 soldering iron which looks similar to the Pinecil](https://hackaday.com/wp-content/uploads/2017/06/ts100-thumbnail.jpg)
 *Jenny List from Hackaday*
@@ -46,11 +46,11 @@ I've compared the Pinecil with other portable irons below:
 
 Standard shipping on the Pine64 Store is $11.99 USD so I thought it might arrive quickly. Little did I know that it would take four months :upside_down_face:.
 
-The tracking info showed that the package was redirected multiple times in Shenzhen. I was mildly concerned but chalked it up to a combination of COVID-19 conditions and increased volume.
-However at the two month mark, I was left with the dreaded text `2021-06-10 19:00 United States, overseas import cancellation`. Shortly after that the tracking number actually expired and there were no more updates.
-I can only conclude that it got lost at customs.
+The tracking info showed that the package was redirected multiple times in Shenzhen. I was mildly concerned but chalked it up to a combination of COVID-19 conditions and increased shipping volume.
+However, after three months, the tracking number expired and the last update was `2021-06-10 19:00 United States, overseas import cancellation`.
+It probably got lost at customs.
 
-I reached out to The Pine64 team and they were kind enough to send me a second one. To their credit, this package took only 20 days to arrive. The box was a bit roughed up but the Pinecil was perfectly fine.
+I reached out to the Pine64 team and they were kind enough to send me a second one. To their credit, this package took only 20 days to arrive. The box was a bit roughed up but the Pinecil was perfectly fine.
 
 ## Review
 
@@ -59,16 +59,21 @@ I reached out to The Pine64 team and they were kind enough to send me a second o
 There are no instructions in the box nor any on the [Pinecil's store page](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/) but I found the GitHub repo for [IronOS](https://github.com/Ralim/IronOS), the Pinecil's firmware.
 Through that I discovered that there is a [Pinecil wiki page](https://wiki.pine64.org/wiki/Pinecil)... :facepalm:
 
+The interface is simple enough ---  click plus to activate the iron, click minus to go into settings.
+
 ### Repair Job
 
-With setup out of the way I used it in repairing a really old record player. The PCB traces looked quite different from anything I've seen before:
+With the setup out of the way, I used the Pinecil in repairing a really old record player. The PCB traces looked quite different from anything I've seen before:
 
 ![Record player PCB with smooth traces](record_player_pcb.jpg)
 
-I used my laptop's USB-C charger to power the Pinecil. It heats up *really fast*. The tip conducts well and the solder melts quickly. There is some hysteresis near the target temperature but it stabilizes after a bit.
+I used my laptop's 60W USB-C charger to power the Pinecil. It heats up *really fast*. The tip conducts well and the solder melts quickly. There is some hysteresis near the target temperature but it stabilizes after a bit.
 
-The only issue I had was some awkwardness with positioning the iron when not in use.
-The [mini stand](https://pine64.com/product/pinecil-portable-mini-stand/) provided a place to rest the Pinecil without damaging my table. However, I was worried the entire time about pulling on the cable and dropping the iron. I plan to design and 3D print my own more secure stand (inspired by the [Hakko FM-2027](https://hakkousa.com/products/soldering/soldering-irons/fm-2027-soldering-iron-handpiece-kit.html)'s secure mounting stand).
+The only issue I had was some awkwardness with safely positioning the iron when not in use.
+The [mini stand](https://pine64.com/product/pinecil-portable-mini-stand/) provided a place to rest the Pinecil without damaging my table. However, I was worried the entire time about pulling on the cable and dropping the iron. I will probably design and 3D print a more secure mounted stand.
+
+![Pinecil on portable mini stand](https://pine64.com/wp-content/uploads/2020/12/Pinecil-Portable-Stand-4.jpg)
+*Pine Store image of the portable mini stand*
 
 ## Closing thoughts
 
