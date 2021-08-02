@@ -80,14 +80,14 @@ The [mini stand](https://pine64.com/product/pinecil-portable-mini-stand/) provid
 
 ## Closing thoughts
 
-The biggest takeaway from my experience with the Pinecil is that USB-C is *the future*.
-For the first time in electronics, we have a standard, reversible connector for delivering power, transferring data, and a variety of other auxiliary functions.
-USB-C was first adopted in smartphones, then laptops, and only recently in select small footprint electronics like power banks and single-board computers.
+The biggest takeaway from my experience with the Pinecil was that USB-C is *the future*.
+We finally have a standard, reversible connector for delivering power, transferring data, and other auxiliary functions.
+USB-C was first adopted in smartphones, then laptops, and only recently in select small footprint electronics like single-board computers.
 Continuing this trend, I expect more traditional devices to be USB-C enabled very soon.
-Imagine a power drill with USB-C connectivity: you would have the freedom to power it from the grid, a battery pack of your choice, or even your phone!
+Imagine a power drill with USB-C connectivity: you would have the freedom to power it from the grid, a battery pack of your choice, or even your phone.
 
 It goes without saying that the Pine64 team and community have created an impressive product.
-Rough edges aside, there's no question that it beats the competition.
-Even more surprising is that the Pinecil's PCB designs, schematics, and firmware are all openly available.
+Rough edges aside, it is the best portable soldering iron that I've seen.
+The Pinecil's PCB designs, schematics, and firmware are all openly available.
 The iron is extensible, easy to repair, and backed by a large community.
 I'm really looking forward to see what Pine64 releases next!
