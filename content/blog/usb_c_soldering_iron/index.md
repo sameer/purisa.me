@@ -1,7 +1,7 @@
 +++
-title = "Pinecil: a USB-C soldering iron"
+title = "The Pinecil: a portable USB-C soldering iron"
 date = 2021-08-01T15:36:42-04:00
-description = "My thoughts on the Pinecil, a portable USB-C soldering iron"
+description = "My thoughts on the Pinecil: a portable USB-C soldering iron."
 [taxonomies]
 tags = ["hardware"]
 +++
@@ -33,13 +33,16 @@ I've compared the Pinecil with other portable irons below:
 ||Hakko FX-901|TS100|TS80P|Pinecil|
 |--|--|--|--|--|
 |Power supply|4 AA Batteries|barrel jack|USB-C / barrel jack|USB-C / barrel jack|
-|Power consumption|6W|:question:|18W|60W|
+|Power output (max)|6W|65W<br>(theoretical)|18W|60W|
+|Temperature control|:x:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|Motion sensor|:x:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|Swappable tip|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 |Microcontroller|N/A|STM32 (ARM)|STM32 (ARM)|GD32VF103TB (RISCV)|
-|Motion sensitive|:x:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 |Open-source firmware|N/A|:ok:<br>(FOSS alternative available)|:ok:<br>(FOSS alternative available)|:heavy_check_mark:|
 |PCB schematics|:x:|:x:|:x:|:heavy_check_mark:|
 |PCB placement diagrams|:x:|:x:|:x:|:heavy_check_mark:|
 |Price|$32.07|~ $70|$109.95|$24.99<br>(community price)|
+|Picture|![Hakko FX-901](https://www.hakko.com/upload_e/products_pro/image/image44.jpg)|![TS100](https://hackaday.com/wp-content/uploads/2017/06/ts100-thumbnail.jpg)|![TS80P](https://cdn-shop.adafruit.com/970x728/4244-08.jpg)|![Pinecil](https://pine64.com/wp-content/uploads/2020/11/pinecil-bb2-04.jpg)|
 |Link|[Hakko](https://www.hakko.com/english/products/hakko_fx901_spec.html)|[Amazon](https://www.amazon.com/s?k=ts100)|[Adafruit](https://www.adafruit.com/product/4244)|[Pine Store](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/)|
 
 ## Shipping
@@ -67,7 +70,7 @@ With the setup out of the way, I used the Pinecil in repairing a really old reco
 
 ![Record player PCB with smooth traces](record_player_pcb.jpg)
 
-I used my laptop's 60W USB-C charger to power the Pinecil. It heats up *really fast*. The tip conducts well and the solder melts quickly. There is some hysteresis near the target temperature but it stabilizes after a bit.
+I used my laptop's 60W USB-C charger to power the Pinecil. It heats up *really fast*. The tip conducts well and the solder melts quickly. There is some oscillation around the target temperature, but it stabilizes after a bit.
 
 The only issue I had was some awkwardness with safely positioning the iron when not in use.
 The [mini stand](https://pine64.com/product/pinecil-portable-mini-stand/) provided a place to rest the Pinecil without damaging my table. However, I was worried the entire time about pulling on the cable and dropping the iron. I will probably design and 3D print a more secure mounted stand.
