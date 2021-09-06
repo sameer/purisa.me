@@ -30,7 +30,7 @@ WA SEATTLE/METRO    KSEA  SEA   72793  47 27N  122 19W  115   X     U     A    0
 ```
 
 The file is split into sections by US state, Canadian province, and other countries.
-Each entry consists of 83 characters with info on a station's:
+Each 83-character entry contains a station's:
 
 - Name
 - Country
@@ -43,7 +43,11 @@ Each entry consists of 83 characters with info on a station's:
 
 Here's a quick-and-dirty map of the stations:
 
-<div id="map" class="map"></div>
+<div id="map" class="ol-map"></div>
+<div id="popup" class="ol-popup">
+    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    <div id="popup-content"></div>
+</div>
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.6.1/css/ol.css" type="text/css">
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.6.1/build/ol.js"></script>

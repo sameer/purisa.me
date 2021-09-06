@@ -1,251 +1,324 @@
 /* Copyright 2017 Sameer Puri; MIT licensed  (modifications) */
 
 .begone-scrapers {
-    // Use RTL to trick scrapers
-    unicode-bidi: bidi-override;
-    direction: rtl;
+  // Use RTL to trick scrapers
+  unicode-bidi: bidi-override;
+  direction: rtl;
 
-    // Prevent selection so it doesn't confuse anyone trying to copy + paste it
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  // Prevent selection so it doesn't confuse anyone trying to copy + paste it
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-div.map {
-    max-width: 100%;
-    height: 30em;
+.ol-map {
+  max-width: 100%;
+  height: 30em;
 }
 
-.tags, .post-information, .social, .langs {
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 0.5em;
+// Derived from https://openlayers.org/en/latest/examples/popup.html
+
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid whitesmoke;
+  bottom: 12px;
+  left: -50px;
+  min-width: 10em;
+  min-height: 1em;
+}
+.ol-popup:after,
+.ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.ol-popup:after {
+  border-top-color: whitesmoke;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+.ol-popup:before {
+  border-top-color: whitesmoke;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+.ol-popup-closer:after {
+  content: "✖";
+}
+.tags,
+.post-information,
+.social,
+.langs {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 0.5em;
 }
 
 .utterances {
-    position: inherit;
-    margin-left: initial;
+  position: inherit;
+  margin-left: initial;
 }
 
 .utterances-frame {
-    position: inherit;
+  position: inherit;
 }
 
 html {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-pre > code > span, code {
-    font-family: monospace;
+pre > code > span,
+code {
+  font-family: monospace;
 }
 
 p > code {
-    background-color: rgba(27,31,35,.05);
-    padding: .2em .4em;
+  background-color: rgba(27, 31, 35, 0.05);
+  padding: 0.2em 0.4em;
 }
 
 pre {
-    padding: 10px;
-    background-color: rgba(27,31,35,.05) !important;
-    overflow-x: auto;
-    max-width: calc(100% - 20px);
+  padding: 10px;
+  background-color: rgba(27, 31, 35, 0.05) !important;
+  overflow-x: auto;
+  max-width: calc(100% - 20px);
 }
 
 table {
-    table-layout: fixed;
-    border-collapse: collapse;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
 thead {
-    border-bottom: solid black 1px;
+  border-bottom: solid black 1px;
 }
 
-th, td {
-    padding: 0.2em;
+th,
+td {
+  padding: 0.2em;
 }
 
-th:not(:last-child), td:not(:last-child) {
-    border-right: solid black 1px;
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: solid black 1px;
 }
 
-
-th:not(:first-child), td:not(:first-child) {
-    text-align: center;
+th:not(:first-child),
+td:not(:first-child) {
+  text-align: center;
 }
-
 
 blockquote {
-    border-left: 5px solid silver;
+  border-left: 5px solid silver;
 }
 
-.footnote-definition, blockquote, details {
-    padding: 10px;
-    margin-bottom: 5px;
+.footnote-definition,
+blockquote,
+details {
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
 details > summary {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .footnote-definition > p {
-    display: inline;
+  display: inline;
 }
 
 /* Give list elements some spacing */
-ul > li, ol > li {
-    margin-top: 0.2em;
+ul > li,
+ol > li {
+  margin-top: 0.2em;
 }
 
 /* Don't apply to the very first element in a top-level list */
-div > ul > li:is(:first-child), div > ol > li:is(:first-child) {
-    margin-top: auto;
+div > ul > li:is(:first-child),
+div > ol > li:is(:first-child) {
+  margin-top: auto;
 }
 
-img, video {
-    max-width: 100%;
+img,
+video {
+  max-width: 100%;
 }
 
 /* Let text dominate the screen, not images. If it's the last image maybe we want it at original size */
-p > img, p > video {
-    max-height: 30em;
-    border: solid whitesmoke 1px;
+p > img,
+p > video {
+  max-height: 30em;
+  border: solid whitesmoke 1px;
 }
 
 img + em {
-    display: block;
+  display: block;
 }
 
 .container > img {
-    max-width: 80%;
-    max-height: 80%;
-    display: block;
-    margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  margin: auto;
 }
-img.ico, img.adjacent-text {
-    height: 1em;
-    vertical-align: baseline;
-    // As per https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
-    position: relative;
-    top: .125em;
-    border: none;
+img.ico,
+img.adjacent-text {
+  height: 1em;
+  vertical-align: baseline;
+  // As per https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+  position: relative;
+  top: 0.125em;
+  border: none;
 }
 
-h1,h2 {
-    border-bottom: 1px dotted silver;
+h1,
+h2 {
+  border-bottom: 1px dotted silver;
 }
 
 footer {
-    border-top: 1px dotted silver;
-    padding: 10px;
+  border-top: 1px dotted silver;
+  padding: 10px;
 }
 
-h2.post-title > a, a.tag {
-    text-decoration: none;
+h2.post-title > a,
+a.tag {
+  text-decoration: none;
 }
 
-h2.post-title > a:hover, a.tag:hover {
-    text-decoration: underline;
+h2.post-title > a:hover,
+a.tag:hover {
+  text-decoration: underline;
 }
 
 a.zola-anchor {
-    display: inline-block;
-    margin-left: 1ex;
-    border-bottom-color: transparent;
-    text-decoration: none;
-    color: transparent;
+  display: inline-block;
+  margin-left: 1ex;
+  border-bottom-color: transparent;
+  text-decoration: none;
+  color: transparent;
 }
 
 :target > a.zola-anchor {
-    color: inherit;
+  color: inherit;
 }
 
-h2:hover > a.zola-anchor, h3:hover > a.zola-anchor, h4:hover > a.zola-anchor {
-    color: inherit;
+h2:hover > a.zola-anchor,
+h3:hover > a.zola-anchor,
+h4:hover > a.zola-anchor {
+  color: inherit;
 }
 
 /* Copyright 2014 Owen Versteeg; MIT licensed */
-body,textarea,input,select{
-    background:0;
-    border-radius:0;
-    margin:0;
+body,
+textarea,
+input,
+select {
+  background: 0;
+  border-radius: 0;
+  margin: 0;
 }
-.nav a{
-    text-decoration:none
+.nav a {
+  text-decoration: none;
 }
-.container{
-    margin:0 20px;
-    width:auto
-}
-
-textarea,input,select{
-    padding:8px;
-    border:1px solid #ccc
-}
-textarea:focus,input:focus,select:focus{
-    border-color:#5ab
-}
-textarea,input[type=text]{
-    -webkit-appearance:none;
-    width:13em
+.container {
+  margin: 0 20px;
+  width: auto;
 }
 
-.nav,.nav .current,.nav a:hover{
-    background:#000;
-    color:#fff
+textarea,
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
 }
-.nav{
-    height:24px;
-    padding:11px 0 15px
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #5ab;
 }
-.nav a{
-    color:#aaa;
-    padding-right:1em;
-    position:relative;
-    top:-1px
-}
-.nav .pagename{
-    font-size:22px;
-    top:1px
+textarea,
+input[type="text"] {
+  -webkit-appearance: none;
+  width: 13em;
 }
 
-@media(min-width:1310px){
-    .container{
-        margin:auto;
-        // Line width on most IDEs
-        max-width: 85ch;
-    }
+.nav,
+.nav .current,
+.nav a:hover {
+  background: #000;
+  color: #fff;
+}
+.nav {
+  height: 24px;
+  padding: 11px 0 15px;
+}
+.nav a {
+  color: #aaa;
+  padding-right: 1em;
+  position: relative;
+  top: -1px;
+}
+.nav .pagename {
+  font-size: 22px;
+  top: 1px;
 }
 
-@media(max-width:500px){
-    .btn.btn-close{
-        display:block
-    }
-    .nav{
-        overflow:hidden
-    }
-    .pagename{
-        margin-top:-11px
-    }
-    .nav:active,.nav:focus{
-        height:auto
-    }
-    .nav div:before{
-        background:#000;
-        border-bottom:10px double;
-        border-top:3px solid;
-        content:'';
-        float:right;
-        height:4px;
-        position:relative;
-        right:3px;
-        top:14px;
-        width:20px;
-        cursor: pointer;
-    }
-    .nav a{
-        padding:.5em 0;
-        display:block;
-        width:50%
-    }
+@media (min-width: 1310px) {
+  .container {
+    margin: auto;
+    // Line width on most IDEs
+    max-width: 85ch;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn.btn-close {
+    display: block;
+  }
+  .nav {
+    overflow: hidden;
+  }
+  .pagename {
+    margin-top: -11px;
+  }
+  .nav:active,
+  .nav:focus {
+    height: auto;
+  }
+  .nav div:before {
+    background: #000;
+    border-bottom: 10px double;
+    border-top: 3px solid;
+    content: "";
+    float: right;
+    height: 4px;
+    position: relative;
+    right: 3px;
+    top: 14px;
+    width: 20px;
+    cursor: pointer;
+  }
+  .nav a {
+    padding: 0.5em 0;
+    display: block;
+    width: 50%;
+  }
 }
