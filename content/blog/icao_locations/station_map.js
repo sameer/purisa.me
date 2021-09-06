@@ -65,7 +65,7 @@ map.addLayer(
     style: {
       symbol: {
         symbolType: "circle",
-        size: 8,
+        size: 10,
         color: "rgba(0,0,255,0.5)",
       },
     },
