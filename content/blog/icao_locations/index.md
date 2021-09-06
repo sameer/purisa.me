@@ -14,12 +14,32 @@ The first letter identifies which part of the world the station is in. For insta
 ![Mercator projection map of world regions classified according to the first letter or two of the ICAO airport code](ICAO_FirstLetter.svg)
 _Hytar [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons_
 
-Now you might ask: given an ICAO location code, how do find the station it corresponds to?
-Officially, all assigned codes are enumerated in [Doc 7910/780](https://store.icao.int/en/location-indicators-doc-7910): a $257 PDF.
-Programmatic access to the [API for Doc 7910](https://applications.icao.int/dataservices/apis.html) costs $400 at minimum :money_mouth_face:
+Now you might ask: given an ICAO location code, how do I find the station it corresponds to?
+ICAO provides a list of all the assigned codes in [Doc 7910](https://store.icao.int/en/location-indicators-doc-7910): a $257 PDF.
+Programmatic access to the [API for Doc 7910](https://applications.icao.int/dataservices/apis.html) costs at least $400 :money_mouth_face:
 
-Fortunately, there is a much more cost effective (read: free) alternative. Greg Thompson at the [National Center for Atmospheric Research (NCAR)](https://en.wikipedia.org/wiki/National_Center_for_Atmospheric_Research) maintains a comprehensive list of stations: [stations.txt](https://www.aviationweather.gov/docs/metar/stations.txt).
-The format is easy enough to parse.
+Fortunately, there is a much more cost effective (read: free) alternative. Greg Thompson at the National Center for Atmospheric Research ([NCAR](https://en.wikipedia.org/wiki/National_Center_for_Atmospheric_Research)) maintains a comprehensive list of stations: [stations.txt](https://www.aviationweather.gov/docs/metar/stations.txt).
+The format is pretty straightforward:
+
+```
+...
+WASHINGTON         21-OCT-20
+CD  STATION         ICAO  IATA  SYNOP   LAT     LONG   ELEV   M  N  V  U  A  C
+WA SEATTLE/METRO    KSEA  SEA   72793  47 27N  122 19W  115   X     U     A    0 US
+...
+```
+
+The file is split into sections by US state, Canadian province, and other countries.
+Each entry consists of 83 characters with info on a station's:
+
+- Name
+- Country
+- Province/State if any
+- [ICAO code](https://en.wikipedia.org/wiki/ICAO_airport_code) if assigned
+- [IATA code](https://en.wikipedia.org/wiki/International_Air_Transport_Association_code) if assigned
+- Location
+- Elevation
+- Capabilities & Type (i.e. whether it is a METAR reporting station)
 
 Here's a quick-and-dirty map of the stations:
 
