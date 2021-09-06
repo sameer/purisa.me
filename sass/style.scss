@@ -12,6 +12,11 @@
     -ms-user-select: none;
 }
 
+div.map {
+    max-width: 100%;
+    height: 30em;
+}
+
 .tags, .post-information, .social, .langs {
     display: flex;
     flex-flow: row wrap;
