@@ -3,12 +3,12 @@ title = "Pen Plotter"
 date = 2019-05-13T16:38:58-04:00
 description = "How I helped build a pen plotter from a design on Thingiverse and wrote svg2gcode to draw SVGs with it."
 [taxonomies]
-tags = ["hardware"]
+tags = ["hardware", "g-code", "svg"]
 +++
 
 Plotters are a type of printer for drawing vector graphics that emerged in the early 1960s. There are many types, the most common being the pen plotter which draws on paper with a pen. Known for their high quality, they are used for printing technical drawings like blueprints or isometric views of CAD models. However, improvements in raster-based printing (i.e. laser, inkjet printers) like higher resolution and larger formats have made plotters largely obsolete. Some are still used in unconventional situations like drawing on media that cannot be bent (i.e. packages, CDs) and cutting vinyl stickers.
 
-For a group project in the Spring 2019 semester, I helped build one following [Henry Arnold's Drawing Robot page on Thingiverse](https://www.thingiverse.com/thing:2349232). The parts cost $138.92 [^1] and took our team of three 20 hours to assemble.
+For a class project in the Spring 2019 semester, I helped build one following [Henry Arnold's Drawing Robot page on Thingiverse](https://www.thingiverse.com/thing:2349232). The parts cost $138.92 [^1] and took our team of three 20 hours to assemble.
 
 ![Assembled pen plotter](plotter.jpg)
 The two large stepper motors (black cubes) are connected via a single timing belt, using the [CoreXY technique](https://corexy.com/theory.html) to move the print head. A small stepper motor (blue, next to pen) on the print head lowers or raises the pen. An Arduino Uno loaded with the [GRBL CNC firmware](https://github.com/gnea/grbl/) controls plotter motion. A laptop (not pictured) is used by the end user to send [GCode instructions](https://en.wikipedia.org/wiki/G-code) using [Universal G-Code Sender](https://github.com/winder/Universal-G-Code-Sender) to the Arduino telling it where to move the print head. Below are a few samples of the page the pen plotter drew on, showing its precision.
