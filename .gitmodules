@@ -1,6 +1,8 @@
 [submodule "static/MaterialDesign-SVG"]
 	path = static/MaterialDesign-SVG
 	url = https://github.com/Templarian/MaterialDesign-SVG.git
+	shallow = true
 [submodule "static/inter-ui"]
 	path = static/inter-ui
 	url = https://github.com/philipbelesky/inter-ui.git
+	shallow = true
