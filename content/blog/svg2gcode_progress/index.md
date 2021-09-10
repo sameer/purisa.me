@@ -12,14 +12,12 @@ tags = ["g-code", "svg"]
 *Example vector graphic*
 
 ![Picture of a Prusa Mini+ 3D printer with a plastic attachment holding a pen](https://raw.githubusercontent.com/wiki/sameer/models/prints/prusa_mini_plotter.jpg)
-*Pen plotter attachment on a 3D printer*
-
 ![Picture of a 5-point star drawn by a pen plotter using a blue pen](https://user-images.githubusercontent.com/11097096/119063561-6fb8ef80-b9a7-11eb-9f2f-ca69c0c1c9ae.png)
-*Drawings made with the above pen plotter*
+*A pen plotter attachment is used to draw the SVG on a 3D printer*
 
 Quoting Thomas Kole [on Twitter](https://twitter.com/ThomasKoleTA/status/1422637394562531329):
 
-> It's written in rust and was super easy to compile for the Pi. I first tried a python implementation, but this is orders of magnitude faster. It's crazy fast.
+> It's written in rust and was super easy to compile for the [Raspberry] Pi. I first tried a python implementation, but this is orders of magnitude faster. It's crazy fast.
 
 I initially released svg2gcode in 2019 as part of a project to [build a pen plotter](/blog/pen-plotter).
 The Inkscape extension we tried to use for that was overly complicated so I set out to build a standalone tool from scratch.
