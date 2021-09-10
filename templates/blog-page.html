@@ -13,7 +13,7 @@
             {% endif %}
         </div>
     </div>
-    {% if page.description %}<span>{{ page.description }}</span>{% endif %}
+    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
     {{ page.content | safe }}
     <h2 id="comments">Comments<a class="zola-anchor" href="#comments" aria-label="Anchor link for: comments">&#x1F517;</a></h2>
     <script src="https://utteranc.es/client.js"

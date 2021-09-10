@@ -1,4 +1,7 @@
-/* Copyright 2017 Sameer Puri; MIT licensed  (modifications) */
+/* Copyright 2017-2021 Sameer Puri; MIT licensed  (modifications) */
+
+$rule: silver;
+$border: whitesmoke;
 
 .begone-scrapers {
   // Use RTL to trick scrapers
@@ -25,7 +28,7 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 15px;
   border-radius: 10px;
-  border: 1px solid whitesmoke;
+  border: 1px solid $border;
   bottom: 12px;
   left: -50px;
   min-width: 10em;
@@ -42,13 +45,13 @@
   pointer-events: none;
 }
 .ol-popup:after {
-  border-top-color: whitesmoke;
+  border-top-color: $border;
   border-width: 10px;
   left: 48px;
   margin-left: -10px;
 }
 .ol-popup:before {
-  border-top-color: whitesmoke;
+  border-top-color: $border;
   border-width: 11px;
   left: 48px;
   margin-left: -11px;
@@ -165,7 +168,7 @@ video {
 p > img,
 p > video {
   max-height: 30em;
-  border: solid whitesmoke 1px;
+  border: solid $border 1px;
 }
 
 img + em {
@@ -190,11 +193,11 @@ img.adjacent-text {
 
 h1,
 h2 {
-  border-bottom: 1px dotted silver;
+  border-bottom: 1px dotted $rule;
 }
 
 footer {
-  border-top: 1px dotted silver;
+  border-top: 1px dotted $rule;
   padding: 10px;
 }
 
@@ -206,6 +209,10 @@ a.tag {
 h2.post-title > a:hover,
 a.tag:hover {
   text-decoration: underline;
+}
+
+.post-description {
+  font-weight: 500;
 }
 
 a.zola-anchor {
