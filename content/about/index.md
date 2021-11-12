@@ -26,7 +26,7 @@ Want to chat? You can reach me by email at <span class="begone-scrapers" aria-la
 * [FPGA SDRAM controller](https://github.com/hdl-util/sdram-controller/)
 * [HDMI v1.4b audio/video output on an FPGA](https://github.com/hdl-util/hdmi/)
 * [Vanderbilt Design Studio Automation](https://github.com/vanderbilt-design-studio/state-machine)
-* [Git Large File Storage with IPFS](https://github.com/sameer-git-lfs-ipfs)
+* [Git Large File Storage with IPFS](https://github.com/sameer/git-lfs-ipfs)
 * [svg2gcode: convert vector graphics to pen plotter instructions](https://github.com/sameer/svg2gcode)
 * [Orient STL files for FFF/FDM 3D printing using nonlinear optimization](https://github.com/sameer/orient-stl)
 * [Take a Number: Queueing system for Vanderbilt Teaching Assistants](https://github.com/take-a-number/frontend)
