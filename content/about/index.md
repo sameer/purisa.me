@@ -6,7 +6,7 @@ description = "A little bit about me, what I do, and how to reach me."
 
 Hey there! :wave:
 
-I'm Sameer Puri. I work at Amazon Music as a software development engineer. Much of my free time goes towards my hobby software/hardware projects. FPGA development is often a part of those! Technical things aside, I also enjoy reading, growing houseplants, and hiking.
+I'm Sameer Puri. I work at Dropbox as a software engineer. Much of my free time goes towards my hobby software/hardware projects. FPGA development is often a part of those! Technical things aside, I also enjoy reading, growing houseplants, and hiking.
 
 ### Social
 
