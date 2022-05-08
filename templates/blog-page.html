@@ -9,7 +9,7 @@
     <div class="tags">
         {% if page.taxonomies.tags %}
         {% for tag in page.taxonomies.tags %}
-        <span><a href="{{ get_taxonomy_url(kind=" tags", name=tag) }}" class="tag"><img class="ico"
+        <span><a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag"><img class="ico"
                     src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag }}</a></span>
         {% endfor %}
         {% endif %}
