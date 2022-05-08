@@ -1,4 +1,4 @@
-/* Copyright 2017-2021 Sameer Puri; MIT licensed  (modifications) */
+/* Copyright 2017-2022 Sameer Puri; MIT licensed  (modifications) */
 
 $rule: silver;
 $border: whitesmoke;
@@ -34,6 +34,7 @@ $border: whitesmoke;
   min-width: 10em;
   min-height: 1em;
 }
+
 .ol-popup:after,
 .ol-popup:before {
   top: 100%;
@@ -44,27 +45,32 @@ $border: whitesmoke;
   position: absolute;
   pointer-events: none;
 }
+
 .ol-popup:after {
   border-top-color: $border;
   border-width: 10px;
   left: 48px;
   margin-left: -10px;
 }
+
 .ol-popup:before {
   border-top-color: $border;
   border-width: 11px;
   left: 48px;
   margin-left: -11px;
 }
+
 .ol-popup-closer {
   text-decoration: none;
   position: absolute;
   top: 2px;
   right: 8px;
 }
+
 .ol-popup-closer:after {
   content: "✖";
 }
+
 .tags,
 .post-information,
 .social,
@@ -87,12 +93,12 @@ html {
   font-family: "Inter", sans-serif;
 }
 
-pre > code > span,
+pre>code>span,
 code {
   font-family: monospace;
 }
 
-p > code {
+p>code {
   background-color: rgba(27, 31, 35, 0.05);
   padding: 0.2em 0.4em;
 }
@@ -139,23 +145,23 @@ details {
   margin-bottom: 5px;
 }
 
-details > summary {
+details>summary {
   cursor: pointer;
 }
 
-.footnote-definition > p {
+.footnote-definition>p {
   display: inline;
 }
 
 /* Give list elements some spacing */
-ul > li,
-ol > li {
+ul>li,
+ol>li {
   margin-top: 0.2em;
 }
 
 /* Don't apply to the very first element in a top-level list */
-div > ul > li:is(:first-child),
-div > ol > li:is(:first-child) {
+div>ul>li:is(:first-child),
+div>ol>li:is(:first-child) {
   margin-top: auto;
 }
 
@@ -165,22 +171,23 @@ video {
 }
 
 /* Let text dominate the screen, not images. If it's the last image maybe we want it at original size */
-p > img,
-p > video {
+p>img,
+p>video {
   max-height: 30em;
   border: solid $border 1px;
 }
 
-img + em {
+img+em {
   display: block;
 }
 
-.container > img {
+.container>img {
   max-width: 80%;
   max-height: 80%;
   display: block;
   margin: auto;
 }
+
 img.ico,
 img.adjacent-text {
   height: 1em;
@@ -201,12 +208,12 @@ footer {
   padding: 10px;
 }
 
-h2.post-title > a,
+h2.post-title>a,
 a.tag {
   text-decoration: none;
 }
 
-h2.post-title > a:hover,
+h2.post-title>a:hover,
 a.tag:hover {
   text-decoration: underline;
 }
@@ -223,13 +230,13 @@ a.zola-anchor {
   color: transparent;
 }
 
-:target > a.zola-anchor {
+:target>a.zola-anchor {
   color: inherit;
 }
 
-h2:hover > a.zola-anchor,
-h3:hover > a.zola-anchor,
-h4:hover > a.zola-anchor {
+h2:hover>a.zola-anchor,
+h3:hover>a.zola-anchor,
+h4:hover>a.zola-anchor {
   color: inherit;
 }
 
@@ -242,9 +249,11 @@ select {
   border-radius: 0;
   margin: 0;
 }
+
 .nav a {
   text-decoration: none;
 }
+
 .container {
   margin: 0 20px;
   width: auto;
@@ -256,11 +265,13 @@ select {
   padding: 8px;
   border: 1px solid #ccc;
 }
+
 textarea:focus,
 input:focus,
 select:focus {
   border-color: #5ab;
 }
+
 textarea,
 input[type="text"] {
   -webkit-appearance: none;
@@ -273,16 +284,19 @@ input[type="text"] {
   background: #000;
   color: #fff;
 }
+
 .nav {
   height: 24px;
   padding: 11px 0 15px;
 }
+
 .nav a {
   color: #aaa;
   padding-right: 1em;
   position: relative;
   top: -1px;
 }
+
 .nav .pagename {
   font-size: 22px;
   top: 1px;
@@ -300,16 +314,20 @@ input[type="text"] {
   .btn.btn-close {
     display: block;
   }
+
   .nav {
     overflow: hidden;
   }
+
   .pagename {
     margin-top: -11px;
   }
+
   .nav:active,
   .nav:focus {
     height: auto;
   }
+
   .nav div:before {
     background: #000;
     border-bottom: 10px double;
@@ -323,6 +341,7 @@ input[type="text"] {
     width: 20px;
     cursor: pointer;
   }
+
   .nav a {
     padding: 0.5em 0;
     display: block;
