@@ -4,24 +4,27 @@
 <h1>{{ section.title }}</h1>
 {% for page in section.pages %}
 <article>
-        <header>
-            <h2 class="post-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-            <div class="post-information">
-                <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read</span>
-                <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}</span>
-                <div class="tags">
-                    {% if page.taxonomies.tags %}
-                        {% for tag in page.taxonomies.tags %}
-                            <span><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag }}</a></span>
-                        {% endfor %}
-                    {% endif %}
-                </div>
+    <header>
+        <h2 class="post-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+        <div class="post-information">
+            <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute
+                read</span>
+            <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date |
+                date(timezone="America/New_York",format="%e %B %Y") }}</span>
+            <div class="tags">
+                {% if page.taxonomies.tags %}
+                {% for tag in page.taxonomies.tags %}
+                <span><a href="{{ get_taxonomy_url(kind=" tags", name=tag) }}" class="tag"><img class="ico"
+                            src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag }}</a></span>
+                {% endfor %}
+                {% endif %}
             </div>
-        </header>
-        {% if page.summary %}
-            <br>{{ page.summary | safe }}
-            <a href="{{ page.permalink }}">Continue reading</a>
-        {% elif page.description %}<br><span>{{ page.description }}</span>{% endif %}
+        </div>
+    </header>
+    {% if page.summary %}
+    <br>{{ page.summary | safe }}
+    <a href="{{ page.permalink }}">Continue reading</a>
+    {% elif page.description %}<br><span>{{ page.description }}</span>{% endif %}
 </article>
 {% endfor %}
 {% endblock content %}

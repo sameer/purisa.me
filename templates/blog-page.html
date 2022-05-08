@@ -1,29 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>{{ page.title }}</h1>
-    <div class="post-information">
-        <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read</span>
-        <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}</span>
-        <div class="tags">
-            {% if page.taxonomies.tags %}
-                {% for tag in page.taxonomies.tags %}
-                    <span><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag }}</a></span>
-                {% endfor %}
-            {% endif %}
-        </div>
+<h1>{{ page.title }}</h1>
+<div class="post-information">
+    <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read</span>
+    <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date |
+        date(timezone="America/New_York",format="%e %B %Y") }}</span>
+    <div class="tags">
+        {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags %}
+        <span><a href="{{ get_taxonomy_url(kind=" tags", name=tag) }}" class="tag"><img class="ico"
+                    src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag }}</a></span>
+        {% endfor %}
+        {% endif %}
     </div>
-    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
-    {{ page.content | safe }}
-    <h2 id="comments"><img class="ico" src="/MaterialDesign-SVG/svg/comment-text.svg" alt="Comment Icon"> Comments<a class="zola-anchor" href="#comments" aria-label="Anchor link for: comments">&#x1F517;</a></h2>
-    <script src="https://utteranc.es/client.js"
-        repo="sameer/purisa.me"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+</div>
+{% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+{{ page.content | safe }}
+<h2 id="comments"><img class="ico" src="/MaterialDesign-SVG/svg/comment-text.svg" alt="Comment Icon"> Comments<a
+        class="zola-anchor" href="#comments" aria-label="Anchor link for: comments">&#x1F517;</a></h2>
+<script src="https://utteranc.es/client.js" repo="sameer/purisa.me" issue-term="pathname" theme="github-light"
+    crossorigin="anonymous" async>
     </script>
-    <footer>
-        This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://purisa.me" property="cc:attributionName" rel="cc:attributionURL">Sameer Puri</a> is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-    </footer>
+<footer>
+    This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span>
+    by <a xmlns:cc="http://creativecommons.org/ns#" href="https://purisa.me" property="cc:attributionName"
+        rel="cc:attributionURL">Sameer Puri</a> is licensed under <a rel="license"
+        href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+</footer>
 {% endblock content %}

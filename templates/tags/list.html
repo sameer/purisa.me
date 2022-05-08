@@ -5,29 +5,30 @@
 
 <div class="tags">
     {% for tag in terms %}
-        <span><a href="{{ tag.permalink }}" class="tag"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag.name }}</a></span>
+    <span><a href="{{ tag.permalink }}" class="tag"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg"
+                alt="Tag icon"> {{ tag.name }}</a></span>
     {% endfor %}
 </div>
-
 
 {% for tag in terms %}
 <h2 id="{{ tag.name }}"><img class="ico" src="/MaterialDesign-SVG/svg/tag.svg" alt="Tag icon"> {{ tag.name }}</h2>
 {% for page in tag.pages %}
 <article>
-        <header>
-            <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-            <div class="post-information">
-                <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute read</span>
-                <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date | date(timezone="America/New_York",format="%e %B %Y") }}</span>
-            </div>
-        </header>
-        {% if page.summary %}
-        <br>{{ page.summary | safe }}
-        <a href="{{ page.permalink }}">Continue reading</a>
-        {% elif page.description %}<br><span>{{ page.description }}</span>{% endif %}
+    <header>
+        <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+        <div class="post-information">
+            <span><img src="/MaterialDesign-SVG/svg/clock-outline.svg" class="ico"> {{ page.reading_time }} minute
+                read</span>
+            <span><img src="/MaterialDesign-SVG/svg/pencil-outline.svg" class="ico"> Published {{ page.date |
+                date(timezone="America/New_York",format="%e %B %Y") }}</span>
+        </div>
+    </header>
+    {% if page.summary %}
+    <br>{{ page.summary | safe }}
+    <a href="{{ page.permalink }}">Continue reading</a>
+    {% elif page.description %}<br><span>{{ page.description }}</span>{% endif %}
 </article>
 {% endfor %}
 {% endfor %}
-
 
 {% endblock content %}
