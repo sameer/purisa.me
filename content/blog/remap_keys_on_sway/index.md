@@ -1,7 +1,7 @@
 +++
-title = "Remapping Keys for Sway"
+title = "Remapping Keys on Sway"
 date = 2022-05-08T16:28:33-07:00
-description = "A simple way to remap a key on Sway WM."
+description = "A simple way to remap keys on Sway WM."
 [taxonomies]
 tags = ["sway", "linux", "wayland"]
 +++
