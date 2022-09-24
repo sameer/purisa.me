@@ -1,6 +1,6 @@
 const map = new ol.Map({
   target: "map",
-  controls: ol.control
+  controls: ol.control.defaults
     .defaults({ attributionOptions: { collapsible: true } })
     .extend([new ol.control.FullScreen()]),
   layers: [
