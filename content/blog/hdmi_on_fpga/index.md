@@ -53,7 +53,7 @@ I bought the Hakko battery powered soldering iron since it's compact enough to t
 
 ## Requirements
 
-I chose the low-pixel format 640x480p @ 60HZ since [DVI 1.0 specification section 2.2.4.1](https://www.fpga4fun.comdvi_spec-V1_0.pdf) indicates it should be supported on most if not all displays. Plus, it's big enough for wide-360p video playback.
+I chose the low-pixel format 640x480p @ 60HZ since [DVI 1.0 specification section 2.2.4.1](https://www.fpga4fun.com/files/dvi_spec-V1_0.pdf) indicates it should be supported on most if not all displays. Plus, it's big enough for wide-360p video playback.
 
 ### Pixel clock
 
@@ -83,7 +83,7 @@ TMDS itself is pretty interesting, let's break it down.
 
 *Differential Signaling* refers to how the 10 bits are transmitted. A positive and negative version of the signal is sent on a twisted pair of copper wiring in the HDMI cable. The receiver can filter out common electromagnetic interference since the signals should be exact opposites of one another and any noise will perturb them roughly the same.
 
-Writing a TMDS encoder from scratch would take time. Thankfully, Jean P. Nicolle from Fpga4fun.com provides [a video TMDS encoder](https://www.fpga4fun.comHDMI_test.zip) which works great.
+Writing a TMDS encoder from scratch would take time. Thankfully, Jean P. Nicolle from Fpga4fun.com provides [a video TMDS encoder](https://www.fpga4fun.com/files/HDMI_test.zip) which works great.
 
 ## Implementation in Verilog
 
