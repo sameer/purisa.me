@@ -18,7 +18,7 @@ On the client side, a mapping library like [Leaflet](https://leafletjs.com/) fet
 ![Tiles stitched together](stitched.png)
 *Upper left tile is the same one we saw at zoom level 12 earlier. &copy; OpenStreetMap Contributors*
 
-Tiles are fetched based on the bounding box the user is looking at and the current zoom level. Let's say we wanted to view the Space Needle on OpenStreetMap at zoom 19. OSM uses the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84) projection for coordinates and places the Space Needle at a latitude and longitude of `47.62049, -122.34928`. We convert these coordinates to the [Web Mercator](https://en.wikipedia.org/wiki/Web_Mercator_projection) projection used by tile servers, and using the zoom derive integer coordinates for the tile to fetch.
+Tiles are fetched based on the bounding box the user is looking at and the current zoom level. Let's say we wanted to view the Space Needle on OpenStreetMap at zoom 19. OSM uses the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84) projection for coordinates and places the Space Needle at a latitude and longitude of `47.62049, -122.34928`. We convert these coordinates to the [Web Mercator](https://en.wikipedia.org/wiki/Web_Mercator_projection) projection used by tile servers, and using the zoom derive integer coordinates of the tile that contains it ([ref](https://github.com/mapbox/mercantile/blob/main/mercantile/__init__.py)).
 
 $$
 lat := 47.62049\\\\
