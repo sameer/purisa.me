@@ -3,7 +3,7 @@ title = "ICAO location codes"
 date = 2021-09-05T15:11:42-04:00
 description = "What they are and where to get them"
 [taxonomies]
-tags = ["weather"]
+tags = ["weather", "maps"]
 +++
 
 [METAR](https://en.wikipedia.org/wiki/METAR) is a common weather report format used by airports around the world.
