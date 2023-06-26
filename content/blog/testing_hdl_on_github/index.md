@@ -49,7 +49,7 @@ First, make sure you've set up hdlmake `Manifest.py`'s for your testbench and a 
     ```
     * The testbench module is named `top_tb`
 1. In `./sim/vsim.do`
-    ```do
+    ```tcl
     onfinish stop
     run -all
     if { [runStatus -full] == "break simulation_stop {\$finish}" } {

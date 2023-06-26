@@ -14,6 +14,7 @@ Want to chat? You can reach me by email at <span class="begone-scrapers" aria-la
 
 <div class="social">
     <span><a href="https://github.com/sameer">GitHub <img src="/MaterialDesign-SVG/svg/github.svg" class="ico"></a></span>
+    <span><a href="https://www.strava.com/athletes/107367241">Strava <img src="/simple-icons/icons/strava.svg" class="ico"></a></span>
     <span><a href="https://www.goodreads.com/user/show/110767968-sameer">Goodreads <img src="/MaterialDesign-SVG/svg/goodreads.svg" class="ico"></a></span>
     <span><a href="https://en.wikipedia.org/w/index.php?target=Purisame&namespace=all&tagfilter=&start=&end=&limit=50&title=Special%3AContributions">Wikipedia <img src="/MaterialDesign-SVG/svg/wikipedia.svg" class="ico"></a></span>
     <span><a href="https://www.youtube.com/channel/UCkFtvOBRvNRRM3aRlhR--pg/">YouTube <img src="/MaterialDesign-SVG/svg/youtube.svg" class="ico"></a></span>
@@ -37,9 +38,9 @@ Want to chat? You can reach me by email at <span class="begone-scrapers" aria-la
 
 <div class="langs">
     <span>Rust <img src="rust.svg" class="ico"></span>
+    <span>Python <img src="python.svg" class="ico"></span>
     <span>Java <img src="java.svg" class="ico"></span>
     <span>Kotlin <img src="kotlin.svg" class="ico"></span>
     <span>Typescript <img src="typescript.svg" class="ico"></span>
-    <span>Python <img src="python.svg" class="ico"></span>
     <span>SystemVerilog <img src ="system_verilog.svg" class="ico"></span>
 </div>

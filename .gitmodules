@@ -6,3 +6,6 @@
 	path = static/inter-ui
 	url = https://github.com/philipbelesky/inter-ui.git
 	shallow = true
+[submodule "static/simple-icons"]
+	path = static/simple-icons
+	url = https://github.com/simple-icons/simple-icons.git
