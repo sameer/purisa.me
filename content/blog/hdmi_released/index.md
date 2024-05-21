@@ -27,7 +27,7 @@ DVI uses the same 8b/10b TMDS encoding scheme as HDMI, but there are no data isl
 
 ### HDMI is not free
 
-This is the biggest difference between DVI and HDMI. DVI is free to use, but HDMI has royalties enforced by the HDMI Alliance. You're free to use HDMI for testing/development, but you have to become an HDMI adopter to use it in end-consumer products. As an adopter, you pay a ~$1k - $2k annual flat fee with a $0.05 per device royalty. You can [read more about it in the repo README.md](https://github.com/hdl-util/hdmi/#hdmi-adoption).
+This is the biggest difference between DVI and HDMI. DVI is free to use, but HDMI has royalties enforced by the HDMI Alliance. You're free to use HDMI for testing/development, but you have to become an HDMI adopter to use it in end-consumer products. As an adopter, you pay a ~$1k - $2k annual flat fee with a $0.05 per device royalty. You can [read more about it in the repo README](https://github.com/hdl-util/hdmi/?tab=readme-ov-file#hdmi-adoption).
 
 ### Data Islands
 

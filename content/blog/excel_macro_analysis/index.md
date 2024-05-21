@@ -78,7 +78,7 @@ against malicious XLM macros. But of course, not everybody has the Office 365 va
 
 [^3]: [Virus Alert by Weird Al Yankovic](https://www.youtube.com/watch?v=zvfD5rnkTws), YouTube
 
-[^1]: [Desktop Operating System Market Share Worldwide](https://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-202012-202012-bar), *statcounter GlobalStats*, February 2021
+[^1]: [Desktop Operating System Market Share Worldwide](https://gs.statcounter.com/os-market-share/desktop/worldwide/), *statcounter GlobalStats*, February 2021
 
 [^2]: [Microsoft Excel > Macro programming > History](https://en.wikipedia.org/wiki/Microsoft_Excel#History), *Wikipedia*
 

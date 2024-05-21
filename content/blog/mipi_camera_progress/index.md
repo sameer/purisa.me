@@ -14,7 +14,7 @@ Before even working with any camera-specific logic, I needed an [I2C bus master]
  
 ## MIPI Cameras
 
-If you've ever worked with a Raspberry Pi, you've probably heard of the [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/camera-module-v2/https://www.raspberrypi.org/products/camera-module-v2/). There are two versions of the module made by the Raspberry Pi Foundation. Version 1.x has an OmniVision OV5647 sensor and version 2.x has a Sony IMX219 sensor.
+If you've ever worked with a Raspberry Pi, you've probably heard of the [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/camera-module-v2/). There are two versions of the module made by the Raspberry Pi Foundation. Version 1.x has an OmniVision OV5647 sensor and version 2.x has a Sony IMX219 sensor.
 
 ![Raspberry Pi Camera v1.3](rpi_camera_v1_3.jpg)
 ![Raspberry Pi Camera v2.1](rpi_camera.jpg)

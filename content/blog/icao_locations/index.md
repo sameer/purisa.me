@@ -16,9 +16,9 @@ _Hytar [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikim
 
 Now you might ask: given an ICAO location code, how do I find the station it corresponds to?
 ICAO provides a list of all the assigned codes in [Doc 7910](https://store.icao.int/en/location-indicators-doc-7910): a $257 PDF.
-Programmatic access to the [API for Doc 7910](https://applications.icao.int/dataservices/apis.html) costs at least $400 :money_mouth_face:
+Programmatic access to the [API for Doc 7910](https://applications.icao.int/dataservices/default.aspx) costs at least $400 :money_mouth_face:
 
-Fortunately, there is a much more cost effective (read: free) alternative. Greg Thompson at the National Center for Atmospheric Research ([NCAR](https://en.wikipedia.org/wiki/National_Center_for_Atmospheric_Research)) maintains a comprehensive list of stations: [stations.txt](https://www.aviationweather.gov/docs/metar/stations.txt).
+Fortunately, there is a much more cost effective (read: free) alternative. Greg Thompson maintains a comprehensive list of stations: [stations.txt](https://weather.rap.ucar.edu/surface/stations.txt).
 The format is pretty straightforward:
 
 ```

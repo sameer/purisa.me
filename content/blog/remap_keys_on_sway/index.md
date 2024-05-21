@@ -27,7 +27,7 @@ There must be a way to remap the Home key so it appears as `Super_L` instead.
 
 There isn't a great unified solution for remapping keys on Wayland. It still has a lot of room for improvement before it can be on par with Xorg.  The easiest approach I found was to replace the keycode's mapping in [XKB](https://en.wikipedia.org/wiki/X_keyboard_extension).
 
-1. Install [aur/wev](https://aur.archlinux.org/packages/wev).
+1. On Arch Linux, install [extra/wev](https://archlinux.org/packages/extra/x86_64/wev/).
 1. Get the keycode for the Home key using wev.
     ```
     [14:     wl_keyboard] key: serial: 27025; time: 16170860; key: 180; state: 1 (pressed)

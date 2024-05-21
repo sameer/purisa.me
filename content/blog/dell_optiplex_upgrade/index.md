@@ -27,7 +27,7 @@ alias gpuauto='rocm-smi --resetpoweroverdrive --resetfans --setperflevel auto'
 I have to stick it out on Windows since the Radeon Pro Software sets a pretty high minimum fan speed.
 
 If I'm planning to use Windows for anything long-term, I need to stop the noise. At first I thought about replacing the `FirstD FD6010U12D` fan, but I can't be sure that others won't sound the same.
-Now that I've [disassembled the fan](https://www.instructables.com/How-to-Repair-a-Computer-Fan/), it sounds like the [MR52ZZ bearings](https://www.nskbearingcatalogue.com/product/mr52zz-bearing/) keeping the fan shaft centered are to blame.
+Now that I've [disassembled the fan](https://www.instructables.com/How-to-Repair-a-Computer-Fan/), it sounds like the [MR52ZZ bearings](https://www.smbbearings.com/firebrick/ckeditor/plugins/upload/Uploads/Documents/bearingpdfs/MR52ZZ-miniature-bearing-2x5x2.5mm.pdf) keeping the fan shaft centered are to blame.
 
 ![FirstD fan disassembled](firstd_fan_disassembled.jpg)
 
@@ -74,7 +74,7 @@ One other gotcha is that BIOS for the Optiplex 7020 [does not support booting di
       * One way is to do a fresh install on an NVMe drive and copy the EFI partition over to the hard drive
         * Note: might need to [repair the bootloader afterwards](https://www.dell.com/support/article/en-us/sln300987/how-to-repair-the-efi-bootloader-on-a-gpt-hdd-for-windows-7-8-8-1-and-10-on-your-dell-pc?lang=en)
         * I tried installing on partition 3 of my NVMe drive but the installer just returned opaque errors
-      * Ended up installing directly on my HDD and [adding it to grub via os-prober](https://wiki.archlinux.org/index.php/GRUB#MS_Windows)
+      * Ended up installing directly on my HDD and [adding it to grub via os-prober](https://wiki.archlinux.org/index.php/GRUB#Windows)
 
 Now it takes just a few seconds to load up Linux and start [sway](https://swaywm.org/)!
 

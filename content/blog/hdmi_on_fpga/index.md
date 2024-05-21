@@ -108,7 +108,7 @@ I didn't have an oscilloscope to check the actual signal so pretty much anything
 
 Differential signals flew over my head in the first implementation where negative channels were just assigned the TMDS signals negated. Instead, I needed to assign the TMDS IO standard to the output channels and use a true differential buffer on the signal.
 
-The MAX 10 FPGA only supports TMDS as an IO input standard so it can't even send HDMI compliant signals. This was pretty discouranging but I was already pretty invested in this project. A couple hours searching through forums led me to [Mike Field's DVI test](http://hamsterworks.co.nz/mediawiki/index.php/Dvid_test) which notes that **specifying the LVDS IO standard instead will still work for some lower resolutions**. MAX 10 luckily supports LVDS output.
+The MAX 10 FPGA only supports TMDS as an IO input standard so it can't even send HDMI compliant signals. This was pretty discouranging but I was already pretty invested in this project. A couple hours searching through forums led me to [Mike Field's DVI test](https://web.archive.org/web/20190215131634/http://hamsterworks.co.nz/mediawiki/index.php/Dvid_test) which notes that **specifying the LVDS IO standard instead will still work for some lower resolutions**. MAX 10 luckily supports LVDS output.
 
 I couldn't find any good documentation on why TMDS and LVDS might be compatible. TMDS is current-mode logic and LVDS is something else. I've come to accept that there's some magical range of overlap between the two at low speeds. 
 
@@ -144,7 +144,7 @@ Being able to display text makes for easier debugging so I'm implementing [VGA-c
 
 ### Audio
 
-HDMI also lets you send audio when video isn't being output. The HDMI version 1.3a specification is available for free from [hdmi.org](https://www.hdmi.org/manufacturer/specification.aspx) and explains data island packet construction for L-PCM audio.
+HDMI also lets you send audio when video isn't being output. The HDMI version 1.3a specification is available for free from [hdmi.org](https://www.hdmi.org/docs/Hdmi13aSpecs) and explains data island packet construction for L-PCM audio.
 
 There are also some cool projects that directly produce audio signals over an audio jack. [Fpga4fun.com has one on PWM with a 1-bit DAC](https://www.fpga4fun.com/PWM_DAC_3.html).
 
