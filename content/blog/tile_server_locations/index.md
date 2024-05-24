@@ -8,7 +8,7 @@ tags = ["maps"]
 
 Every digital map has a basemap: a background layer that gives context to the data displayed. Basemaps can consist of satellite imagery, a simplified view of terrain, or other useful reference information. _Tiling_ is a method for distributing base maps.
 
-![Three squares showing how the final map is formed ](layers.svg)
+![Three squares showing how the final map is formed by combining layers](layers.svg)
 _The basemap is combined with overlays to display the final map_
 
 Tiled maps divide the globe into a grid of squares. Each tile is a 256x256 raster image defined by 3 variables: zoom (z), x, and y. At zoom 0, the globe is represented by a single tile. Increasing the zoom by 1 divides each tile into 4 additional tiles, affording greater detail. Zoom usually does not go beyond 22, at which point tiles are much smaller than a city block.

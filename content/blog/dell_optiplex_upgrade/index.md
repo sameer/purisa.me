@@ -115,7 +115,7 @@ It took a few weeks to go through all the steps, but I have managed to get sub-6
 
 The first thing I did was to delid the CPU. These 4th generation chips are old enough that the [TIM](https://en.wikipedia.org/wiki/Thermal_interface_material) between the integrated heat spreader (IHS) and the die is worth replacing. It's a bit scary to think about removing something so well-adhered, and there's a chance of breaking the chip. Most guides recommend using a delidding kit, but I used the more crude bench vise method. I tried it out on my old CPU first to get some practice:
 
-1. Position the CPU between the jaws so that IHS touches the inner jaw and the PCB touches the outer jaw ![CPU in bench vise](cpu_in_bench_vise.jpg)
+1. Position the CPU between the jaws so that IHS touches the inner jaw and the PCB touches the outer jaw ![CPU in bench vise at an angle](cpu_in_bench_vise.jpg)
 *Atila Gobor, ekwb.com*
 
 1. Double-check the placement. You don't want to be crushing the PCB in half!
@@ -138,13 +138,13 @@ After this, CPU temperature under load went down slightly. But the stock cooler 
 
 This was my most dubious and ambitious upgrade. I wanted to get a Noctua cooler since they are well-reputed for whisper-quiet fans. The smallest cooler [officially compatible with that CPU](https://noctua.at/en/cpu/Intel_Core_i7-4790K) was the NH-L12S, which would barely fit in the case. YouTube user The_Chad uploaded a video [showcasing their Optiplex SFF upgrade](https://www.youtube.com/watch?v=rTILMvzbFnc) with a Noctua L9x65 and i7-4790. This convinced me that it was doable and I ordered the cooler.
 
-![Noctua NH-L12S box](noctua_nh-l12s.jpg)
+![Box for Noctua NH-L12S](noctua_nh-l12s.jpg)
 
 ### Mounting
 
 I realized I'd made a big miscalculation after unboxing the Noctua cooler. The stock cooler doesn't use a standard mounting system. Four long screws screw into threaded standoffs on a metal panel behind the motherboard.
 
-![Stock cooler without fan](stock_cooler_without_fan.jpg)
+![Stock cooler heatsink without fan](stock_cooler_without_fan.jpg)
 
 The standoffs are welded and can't be removed. The new cooler has a different mounting system:
 
@@ -159,7 +159,7 @@ There's a backplate with four threaded poles that is supposed to fit behind the 
 
 Then I installed the cooler. It's a tight fit:
 
-![NH-L12S cooler installed](cooler_installed.jpg)
+![NH-L12S cooler installed in desktop](cooler_installed.jpg)
 
 It's also worth mentioning that Dell uses its own fan cable connector and color coding scheme. There are converter cables, but I just cut the cable off the old cooler fan, stripped the wires, and plugged them into the Noctua connector. Here's how the colors map:
 

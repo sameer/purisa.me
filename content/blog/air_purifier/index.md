@@ -15,8 +15,8 @@ All I needed was a filter and a fan to attach it to. For the filter: a [VortexAi
 
 ![VortexAir True HEPA Filter](filter.jpg)
 *VortexAir True HEPA Filter*
-![Noctua NF A-8 PWM](nf_a8.jpg)
-*Noctua NF A-8 PWM*
+![Noctua NF A-8 PWM Fan](nf_a8.jpg)
+*Noctua NF A-8 PWM Fan*
 
 I soon realized there were a few parts I hadn't thought about -- the fan needed a power supply, and it didn't make a seal with the filter so I needed to make some kind of adapter.
 
@@ -27,7 +27,7 @@ Luckily, I happened to have a USB 5V to 12V DC converter on hand which fit the b
 With my novice [OpenSCAD](https://openscad.org) skills, I modeled and 3D printed an adapter to mount the fan on top of the filter.
 Air is sucked through the filter's fins, up, and out the top.
 
-![Adapter model](adapter.png)
+![Adapter model in OpenSCAD](adapter.png)
 
 ## Bearings
 
@@ -48,7 +48,7 @@ And for the finished air purifier:
 
 The parts used:
 * [VortexAir True HEPA Filter](https://www.homedepot.com/p/LEVOIT-VortexAir-True-HEPA-Replacement-Filter-HEACAFLVNUS0012/317963268): $30
-* [Noctua NF-A8 PWM](https://noctua.at/en/nf-a8-pwm): $20
+* [Noctua NF-A8 PWM Fan](https://noctua.at/en/nf-a8-pwm): $20
 * [5V to 12V USB Boost Converter](https://www.amazon.com/gp/product/B01AY3XLEY/): $9
 * USB-A Wall charger: free
 * 3D printed adapter: $2.84 materials cost

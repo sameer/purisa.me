@@ -40,7 +40,7 @@ Total: $7.40
 The Amazon order took only a day to arrive. The Adafruit order took a bit longer.
 
 The goods, excluding the HDMI breakout which had already been soldered:
-![All the stuff I ordered](order.jpg)
+![All the stuff I ordered: soldering iron, batteries with charger, tip tinner, solder, jumper cables](order.jpg)
 
 I bought the Hakko battery powered soldering iron since it's compact enough to take in checked luggage on a flight. It also gives off some jumbo vape pen vibes.
 

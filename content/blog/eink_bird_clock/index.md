@@ -8,7 +8,7 @@ tags = ["rust", "hardware"]
 
 Last summer, I bought a used [Kindle DX Graphite](https://en.wikipedia.org/wiki/Amazon_Kindle#Kindle_DX_Graphite):
 
-![Kindle DX Graphite](Kindle-DX-Graphite.jpg)
+![Kindle DX Graphite product image](Kindle-DX-Graphite.jpg)
 *User:Evan-Amos Public Domain, via Wikimedia Commons*
 
 Originally released in 2010, the Kindle DX Graphite has a large 9.7" [E Ink Pearl](https://wiki.mobileread.com/wiki/E_Ink_Pearl) display, a full QWERTY keyboard, and audio playback capabilities.
@@ -97,12 +97,12 @@ I immediately transferred it to my computer just in case. If you need a copy, fe
 Flashing the Kindle with the `rootfs.img` turned out to be more than I bargained for. Normally, only the user storage is exposed over USB.
 I needed to use the [onboard serial console](https://www.mobileread.com/forums/showthread.php?t=49942) to open the recovery menu and enable access to the entire filesystem.
 
-![Serial console pinout](https://www.mobileread.com/forums/attachment.php?attachmentid=31375&d=1246319476)
+![Serial console pinout diagram, pins are ?, tx, rx, and ground (left to right)](https://www.mobileread.com/forums/attachment.php?attachmentid=31375&d=1246319476)
 *User:ebs, MobileRead forums*
 
 I didn't have a [USB to TTL UART converter](https://www.adafruit.com/product/954), but I was able to borrow my brother's [Digilent Analog Discovery 2](https://store.digilentinc.com/analog-discovery-2-100msps-usb-oscilloscope-logic-analyzer-and-variable-power-supply/) which supported UART:
 
-![Digilent Analog Discovery 2](digilent.jpg)
+![Digilent Analog Discovery 2 product image](digilent.jpg)
 *SparkFun Electronics, CC BY 2.0*
 
 I rebooted the Kindle, pressed the `enter` key furiously from the console in [WaveForms](https://store.digilentinc.com/waveforms-download-only/), and success!
@@ -136,7 +136,7 @@ Now that things were set up, I started working on the clock itself.
 
 To bring WiFi connectivity to the Kindle, I connected it to a [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) running [Arch Linux ARM](https://archlinuxarm.org/):
 
-![Pi connected to Kindle](pi_with_kindle.jpg)
+![Raspberry Pi connected to Kindle](pi_with_kindle.jpg)
 
 From the Pi, I could run a daemon that refreshes the Kindle every minute and plays a tune every hour.
 

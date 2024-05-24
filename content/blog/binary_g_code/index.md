@@ -40,7 +40,7 @@ Metadata blocks all contain key-value pairs in [INI](https://en.wikipedia.org/wi
 
 The thumbnail block is for embedding small images. [PrusaSlicer](https://www.prusa3d.com/en/page/prusaslicer_424/) adds a [model preview thumbnail](https://help.prusa3d.com/article/model-preview_648687) to be shown on 3D printers with graphical displays. In plaintext G-code, this was hacked in as a [Base64](https://en.wikipedia.org/wiki/Base64) encoded comment ([example](https://imgur.com/c7x9BQ7)).
 
-![Prusa Mini Preview](prusa_mini_preview.jpg)
+![Preview dialog showing thumbnail on a Prusa Mini 3D printer](prusa_mini_preview.jpg)
 
 Thumbnails can be encoded in common image formats like PNG and JPEG, but neither is suited for the application. PNGs use Deflate which, as discussed in [block compression](#block-compression), is hard to adapt to microcontrollers. JPEG decoding needs a fast inverse discrete cosine transform which is computationally intensive and it isn't efficient for small images. In late 2023, Prusa Research made a hard break from PNG to [QOI](https://en.wikipedia.org/wiki/QOI_%28image_format%29) (Quite OK Image Format) for thumbnails. QOI is very recent format announced in 2021. The author's goal was to create a lossless image format that is faster and easier to implement than PNG. This has proven to be true as the [decoder fits in less than 200 lines of code](https://github.com/prusa3d/Prusa-Firmware-Buddy/blob/991dd60247e0ee34ec3866558de6c3b46b124338/src/gui/qoi_decoder.cpp#L6) and uses no heap memory.
 

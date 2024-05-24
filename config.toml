@@ -25,5 +25,7 @@ highlight_theme = "bbedit"
 smart_punctuation = true
 render_emoji = true
 
+lazy_async_image = true
+
 [extra]
 # Put all your custom variables here

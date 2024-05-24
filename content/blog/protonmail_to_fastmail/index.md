@@ -58,7 +58,7 @@ In terms of functionality, the Fastmail app is far superior than other mail apps
 
 My only gripe is that the third line of message text is cut off in the inbox view:
 
-![Android App screenshot](app.jpg)
+![Fastmail Android App screenshot](app.jpg)
 
 
 Overall, it was a pretty easy switch. It only took an hour and I'm set for the next two years.

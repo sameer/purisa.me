@@ -13,7 +13,7 @@ For a class project in the Spring 2019 semester, I helped build one following [H
 ![Assembled pen plotter](plotter.jpg)
 The two large stepper motors (black cubes) are connected via a single timing belt, using the [CoreXY technique](https://corexy.com/theory.html) to move the print head. A small stepper motor (blue, next to pen) on the print head lowers or raises the pen. An Arduino Uno loaded with the [GRBL CNC firmware](https://github.com/gnea/grbl/) controls plotter motion. A laptop (not pictured) is used by the end user to send [GCode instructions](https://en.wikipedia.org/wiki/G-code) using [Universal G-Code Sender](https://github.com/winder/Universal-G-Code-Sender) to the Arduino telling it where to move the print head. Below are a few samples of the page the pen plotter drew on, showing its precision.
 
-![Plotter demo 1](plotter_demo_1.jpg)![Plotter demo 2](plotter_demo_2.jpg)
+![Paper showing a plotted spiral](plotter_demo_1.jpg)![Paper showing a plotted sierpinski triangle, Vanderbilt logo, gosper curve, and more](plotter_demo_2.jpg)
 
 I originally used the [GCodeTools](https://github.com/cnc-club/gcodetools) extension that comes with Inkscape to convert vector graphics into the GCode instructions for the plotter but found it to be unwieldy. The extension was primarily made for CNC milling machines which have a z-axis and many settings that are unrelated to pen plotters. Every time you want to convert an SVG, you have to reconfigure settings in a tool dialog that pops up and covers your image:
 
