@@ -1,7 +1,7 @@
 +++
 title = "MeatPack Algorithm"
 date = 2024-05-28T21:04:36-07:00
-description = "Walkthrough of motivating ideas and the implementation"
+description = "Detailed walkthrough of a compression algorithm for G-code."
 [taxonomies]
 tags = ["g-code", "compression"]
 +++

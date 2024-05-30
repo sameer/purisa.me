@@ -1,7 +1,7 @@
 +++
 title = "DIY Air Purifier"
 date = 2022-02-09T22:30:43-08:00
-description = "A simple air purifier made with an off the shelf HEPA filter"
+description = "A basic air purifier made with an off the shelf HEPA filter."
 [taxonomies]
 tags = ["hardware", "cad", "3dprinting"]
 +++

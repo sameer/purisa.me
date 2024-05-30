@@ -1,7 +1,7 @@
 +++
 title = "svg2gcode Progress Update"
 date = 2021-09-09T16:00:47-07:00
-description = "A review of major changes and what's next"
+description = "A review of major changes and what's next."
 [taxonomies]
 tags = ["g-code", "svg"]
 +++

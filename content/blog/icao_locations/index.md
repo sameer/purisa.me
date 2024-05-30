@@ -1,7 +1,7 @@
 +++
 title = "ICAO location codes"
 date = 2021-09-05T15:11:42-04:00
-description = "What they are and where to get them"
+description = "What they are and where to get them."
 [taxonomies]
 tags = ["weather", "maps"]
 +++

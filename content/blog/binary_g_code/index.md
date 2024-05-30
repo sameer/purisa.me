@@ -1,7 +1,7 @@
 +++
 title = "Binary G-code"
 date = 2024-05-22T23:06:51-07:00
-description = "How it works and why it is useful"
+description = "Overview of a new G-code format released by Prusa Research."
 [taxonomies]
 tags = ["g-code", "compression"]
 +++
