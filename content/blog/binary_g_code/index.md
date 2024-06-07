@@ -6,7 +6,9 @@ description = "Overview of a new G-code format released by Prusa Research."
 tags = ["g-code", "compression"]
 +++
 
-This post is the first in a series I am making about [binary G-code](https://help.prusa3d.com/article/binary-g-code_646763): a compressed format for [G-code](https://en.wikipedia.org/wiki/G-code) released by [Prusa Research](https://www.prusa3d.com/).
+_This post is the first in a series I am making about [binary G-code](https://help.prusa3d.com/article/binary-g-code_646763)_.
+
+Binary G-code is a compressed format for [G-code](https://en.wikipedia.org/wiki/G-code) released by [Prusa Research](https://www.prusa3d.com/).
 They claim a 70% size reduction on average while maintaining a low CPU/memory footprint. This is a _pretty big deal_ for 3D printing and CNC in general.
 
 ## Motivation
@@ -52,4 +54,4 @@ Finally we arrive at the block for G-code itself. It can be in plaintext ASCII o
 
 I am actively working on incorporating binary G-code support into my [g-code for Rust](https://github.com/sameer/g-code) library. The end goal is to provide binary G-code output to [svg2gcode](https://github.com/sameer/svg2gcode) and provide a suite of tooling for working with G-code.
 
-There are posts about Heatshrink, QOI, and MeatPack in the works so stay tuned!
+There are posts about [MeatPack](@/blog/meat_pack_algorithm/index.md), [Heatshrink](@/blog/heat_shrink_algorithm/index.md), and QOI in the works so stay tuned!

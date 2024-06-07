@@ -6,8 +6,7 @@ description = "Detailed walkthrough of a compression algorithm for G-code."
 tags = ["g-code", "compression"]
 +++
 
-This post is the second in a series on [binary G-code](@/blog/binary_g_code/index.md).
-Today I will talk about [MeatPack](https://github.com/scottmudge/OctoPrint-MeatPack), a G-code compression algorithm.
+_This post is the second in a series on [binary G-code](@/blog/binary_g_code/index.md)._
 
 ## Content-aware Compression
 
@@ -87,4 +86,4 @@ This compression scheme is great when data fits the expected histogram. However,
 
 ## What's next
 
-My goal in understanding MeatPack was to port it to Rust so that [svg2gcode](https://github.com/sameer/svg2gcode) can eventually read/write [binary G-code](@/blog/binary_g_code/index.md). The port is available in the [g-code](https://docs.rs/g-code/latest/g_code/) crate. There are a few more pieces needed before binary G-code can be fully supported. The next post in this series will talk about another compression algorithm called [HeatShrink](https://github.com/atomicobject/heatshrink/).
+My goal in understanding MeatPack was to port it to Rust so that [svg2gcode](https://github.com/sameer/svg2gcode) can eventually read/write [binary G-code](@/blog/binary_g_code/index.md). The port is available in the [g-code](https://docs.rs/g-code/latest/g_code/) crate. There are a few more pieces needed before binary G-code can be fully supported. The next post in this series will talk about another compression algorithm called [HeatShrink](@/blog/heat_shrink_algorithm/index.md).
