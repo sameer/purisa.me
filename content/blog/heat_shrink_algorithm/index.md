@@ -44,6 +44,7 @@ Heatshrink has two parameters: _window size_ and _lookahead_. Window size limits
 1. Data can only be encoded if the decoder is given the same parameters as the encoder.
 1. Heatshrink can be tuned to better fit the target system.
 
+Adjusting lookahead does not affect memory usage. Instead, it controls the CPU time-compression ratio tradeoff when encoding. A higher lookahead means more time spent trying to generate backreferences.
 
 There is also a third boolean parameter for the encoder, _indexing_, that when enabled will use additional memory to speed up encoding. This is generally useful if the system has lots of memory to spare.
 
