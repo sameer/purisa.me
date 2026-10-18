@@ -63,10 +63,10 @@ Once enabled the macro will automatically run whatever the attacker intended.
 It's just as bad as downloading a program from an unscrupulous website and trusting it,
 but that may not be as obvious.
 
-The last time I heard of an Excel macro attack was high school before everyone started using [Google Sheets](https://www.google.com/sheets/about/).
+The last time I heard of an Excel macro attack was high school before everyone started using [Google Sheets](https://workspace.google.com/products/sheets/).
 So what gives?
 
-According to security researchers, these attacks are [on the rise again](https://www.csoonline.com/article/3597913/why-excel-4-0-macro-exploits-are-surging.html).
+According to security researchers, these attacks are [on the rise again](https://www.csoonline.com/article/570109/why-excel-4-0-macro-exploits-are-surging.html).
 It's a smart attack vector; 76% of desktop computers run Windows[^1] and the majority have Excel installed in some form.
 This particular variant uses XLM macros which are compatible with *any version of Excel*[^2].
 VBA macros superseded them back in 1993 but they are supported for the sake of backwards compatibility.
@@ -342,7 +342,7 @@ It is a niche Excel antipattern; regular functions only read values from other c
 |sheet1|AO265|FORMULA.FILL("," &AL101 &AL113 &AL113 &AL99 &AL114 &"gisterServer", AP265)|,DllRegisterServer|
 
 This shed some light on the end goal. The payload is a [DLL](https://techterms.com/definition/dll) to be executed with
-[rundll32](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32).
+[rundll32](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32).
 These cells are obfuscated to avoid detection by heuristic virus scanners.
 More complex scanners evaluating the worksheet in a sandbox might overlook this because of FORMULA.FILL.
 

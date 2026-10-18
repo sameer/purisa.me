@@ -14,12 +14,12 @@ Before even working with any camera-specific logic, I needed an [I2C bus master]
  
 ## MIPI Cameras
 
-If you've ever worked with a Raspberry Pi, you've probably heard of the [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/camera-module-v2/). There are two versions of the module made by the Raspberry Pi Foundation. Version 1.x has an OmniVision OV5647 sensor and version 2.x has a Sony IMX219 sensor.
+If you've ever worked with a Raspberry Pi, you've probably heard of the [Raspberry Pi Camera Module](https://www.raspberrypi.com/products/camera-module-v2/). There are two versions of the module made by the Raspberry Pi Foundation. Version 1.x has an OmniVision OV5647 sensor and version 2.x has a Sony IMX219 sensor.
 
 ![Raspberry Pi Camera v1.3](rpi_camera_v1_3.jpg)
 ![Raspberry Pi Camera v2.1](rpi_camera.jpg)
 
-There is also a new ["High Quality" camera](https://www.raspberrypi.org/products/raspberry-pi-high-quality-camera/) with a Sony IMX477 but it costs $50. Getting a lens for it costs even more: ~$62.
+There is also a new ["High Quality" camera](https://www.raspberrypi.com/products/raspberry-pi-high-quality-camera/) with a Sony IMX477 but it costs $50. Getting a lens for it costs even more: ~$62.
 
 The three modules use interfaces created by the MIPI Alliance: Camera Serial Interface v2 and Camera Control Interface.
 

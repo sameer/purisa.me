@@ -23,6 +23,6 @@ To make printing things easier, I wrote [svg2gcode](https://github.com/sameer/sv
 
 Building the pen plotter was a pretty cool project and has given me much insight into related areas like SVG DOM, path tolerances, and 3D printing.
 
-[^1]: They were ordered from Amazon due to a 2-week time constraint. Some like the Arduino CNC shield would have been much cheaper to purchase from other sources. Free 3D printing provided by [The Vanderbilt Design Studio](https://vanderbilt.design) is excluded.
+[^1]: They were ordered from Amazon due to a 2-week time constraint. Some like the Arduino CNC shield would have been much cheaper to purchase from other sources. Free 3D printing provided by [The Vanderbilt Design Studio](https://my.vanderbilt.edu/designstudio/) is excluded.
 
 [^2]: It took me almost 40 hours to write and debug it and I doubt our pen plotter will ever even see that much use.

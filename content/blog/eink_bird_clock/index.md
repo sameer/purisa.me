@@ -134,7 +134,7 @@ Now that things were set up, I started working on the clock itself.
 
 ### Hardware
 
-To bring WiFi connectivity to the Kindle, I connected it to a [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) running [Arch Linux ARM](https://archlinuxarm.org/):
+To bring WiFi connectivity to the Kindle, I connected it to a [Raspberry Pi Zero W](https://www.raspberrypi.com/products/raspberry-pi-zero-w/) running [Arch Linux ARM](https://archlinuxarm.org/):
 
 ![Raspberry Pi connected to Kindle](pi_with_kindle.jpg)
 
@@ -190,7 +190,7 @@ If the Kindle is disconnected or the power is reset, the daemon can run the ipro
 
 #### Graphics
 
-[Cairo](https://www.cairographics.org/) is used for 2D graphics. Text is rendered with the [Inter](https://github.com/rsms/inter) font and emojis with [OpenMoji](https://openmoji.org/). I experimented with SVG-based rendering using Evgeniy Reizner's [resvg](https://github.com/RazrFalcon/resvg), but SVGs are not a good tool for text layout.
+[Cairo](https://www.cairographics.org/) is used for 2D graphics. Text is rendered with the [Inter](https://github.com/rsms/inter) font and emojis with [OpenMoji](https://openmoji.org/). I experimented with SVG-based rendering using Evgeniy Reizner's [resvg](https://github.com/linebender/resvg), but SVGs are not a good tool for text layout.
 
 As a replacement for the bird images I used David Allen Sibley's beautiful drawings of North American birds:
 
