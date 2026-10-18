@@ -99,7 +99,7 @@ The [i5-4590](https://ark.intel.com/content/www/us/en/ark/products/80815/intel-c
 |Hyper-Threading|No|Yes|
 |Overclocking|No|Yes|
 
-The [i7-5775C](https://ark.intel.com/content/www/us/en/ark/products/88040/intel-core-i7-5775c-processor-6m-cache-up-to-3-70-ghz.html) was an interesting option because of its [128MB eDRAM L4 cache](https://en.wikipedia.org/wiki/EDRAM). It seems that it's [useful for rendering](https://www.anandtech.com/show/16195/a-broadwell-retrospective-review-in-2020-is-edram-still-worth-it) and [Monero mining](https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md#choose-value-for-low_power_mode) but I'm doing neither.
+The [i7-5775C](https://ark.intel.com/content/www/us/en/ark/products/88040/intel-core-i7-5775c-processor-6m-cache-up-to-3-70-ghz.html) was an interesting option because of its [128MB eDRAM L4 cache](https://en.wikipedia.org/wiki/EDRAM). It seems that it's [useful for rendering](https://web.archive.org/web/20240409025445/https://www.anandtech.com/show/16195/a-broadwell-retrospective-review-in-2020-is-edram-still-worth-it) and [Monero mining](https://github.com/fireice-uk/xmr-stak/blob/master/doc/tuning.md#choose-value-for-low_power_mode) but I'm doing neither.
 
 **Update**: although the Broadwell chips i5-5675C and i7-5775C fit in an LGA1150 socket, the motherboard must have a Q97/H97 chipset! Quoting [directly from CPU world](https://www.cpu-world.com/Sockets/Socket_1150_LGA1150_H3.html):
 

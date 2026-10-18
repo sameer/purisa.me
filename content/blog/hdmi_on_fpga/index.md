@@ -150,7 +150,7 @@ There are also some cool projects that directly produce audio signals over an au
 
 ### User input
 
-The easiest interface to connect seems to be PS/2 but a PS/2 keyboard is hard to come by. Some older USB keyboards unofficially support fallback to PS/2 over USB. This can be used by treating a USB port as a PS/2 port using the [USB to PS/2 adapter pinout on pinouts.ru](https://pinouts.ru/InputCables/usb_ps2_mouse_pinout.shtml).
+The easiest interface to connect seems to be PS/2 but a PS/2 keyboard is hard to come by. Some older USB keyboards unofficially support fallback to PS/2 over USB. This can be used by treating a USB port as a PS/2 port using the [USB to PS/2 adapter pinout on pinoutguide.com](https://pinoutguide.com/InputCables/usb_ps2_mouse_pinout.shtml).
 
 I was also browsing Adafruit for other components to get and bought a nifty NXP-9 breakout board. It combines an accelerometer, magnetometer, and gyroscope into one package and could be used to build gesture-based user input.
 
