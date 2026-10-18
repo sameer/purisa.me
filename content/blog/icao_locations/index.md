@@ -15,7 +15,7 @@ The first letter identifies which part of the world the station is in. For insta
 _Hytar [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons_
 
 Now you might ask: given an ICAO location code, how do I find the station it corresponds to?
-ICAO provides a list of all the assigned codes in [Doc 7910](https://store.icao.int/en/location-indicators-doc-7910): a $257 PDF.
+ICAO provides a list of all the assigned codes in [Doc 7910](http://store1.icao.int/index.php/location-indicator-doc-7910-quadrilingual-printed.html): a $257 PDF.
 Programmatic access to the [API for Doc 7910](https://applications.icao.int/dataservices/default.aspx) costs at least $400 :money_mouth_face:
 
 Fortunately, there is a much more cost effective (read: free) alternative. Greg Thompson maintains a comprehensive list of stations: [stations.txt](https://weather.rap.ucar.edu/surface/stations.txt).

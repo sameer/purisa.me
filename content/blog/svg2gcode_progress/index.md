@@ -41,7 +41,7 @@ The web interface is functionally equivalent to the CLI tool. There are some add
 
 ![Screenshot of the settings modal for the web app showing different validation states (pass/fail) and an option to save settings](web_app_settings.png)
 
-It is written purely in Rust with the [Yew framework](https://yew.rs). The code is compiled to [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly) using [Trunk](https://trunkrs.dev/), a web application bundler. The UI uses [Spectre.css](https://picturepan2.github.io/spectre/). This allowed me to make it:
+It is written purely in Rust with the [Yew framework](https://yew.rs). The code is compiled to [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly) using [Trunk](https://trunk-rs.github.io/trunk/), a web application bundler. The UI uses [Spectre.css](https://picturepan2.github.io/spectre/). This allowed me to make it:
 
 - Fast :runner:: WebAssembly runs at near native speeds
 - Secure :lock:: user information never leaves the browser

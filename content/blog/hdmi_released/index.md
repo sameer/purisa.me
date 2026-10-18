@@ -21,7 +21,7 @@ Last summer, I started working on a [general purpose HDMI implementation for FPG
 
 A lot of the HDMI VHDL/Verilog code I saw in the beginning was actually just DVI, but sent over an HDMI connector. HDMI displays are supposed to be backwards compatible with DVI signals, which is why there are some passive DVI to HDMI adapters out there:
 
-![DVI to HDMI Adapter](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/DVI-HDMI-Adapter.jpg/2560px-DVI-HDMI-Adapter.jpg) *User:BengtLueers [CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons*
+![DVI to HDMI Adapter](https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/DVI-HDMI-Adapter.jpg/330px-DVI-HDMI-Adapter.jpg) *User:BengtLueers [CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons*
 
 DVI uses the same 8b/10b TMDS encoding scheme as HDMI, but there are no data islands and no guard bands. This means that DVI can send ONLY video, whereas HDMI can transmit much more information.
 

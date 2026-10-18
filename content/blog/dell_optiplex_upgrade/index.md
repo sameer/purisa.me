@@ -8,7 +8,7 @@ tags = ["hardware", "computers"]
 
 Back in February, I bought a Dell Optiplex 7020 SFF. It fits in a carry-on bag, but it's big enough that I've been able to install some much-needed upgrades.
 
-## <img class="ico" src="/MaterialDesign-SVG/svg/expansion-card.svg" alt="GPU icon"> GPU: [Radeon Pro WX 4100](https://www.amd.com/en/products/professional-graphics/radeon-pro-wx-4100)
+## <img class="ico" src="/MaterialDesign-SVG/svg/expansion-card.svg" alt="GPU icon"> GPU: [Radeon Pro WX 4100](https://web.archive.org/web/20190105035418/https://www.amd.com/en/products/professional-graphics/radeon-pro-wx-4100)
 
 Because the desktop is small form factor, I needed a GPU that's half height and low profile. It also couldn't have auxiliary power requirements since the [Dell PSU has proprietary connectors](https://www.dell.com/community/Optiplex-Desktops/Optiplex-3020-7020-9020-XE2-Dell-8pin-ATX-MB-pinout/td-p/7538164) and I didn't want to risk wiring it up incorrectly. The Radeon Pro WX 4100 is the newest GPU that meets all those requirements.
 
@@ -50,7 +50,7 @@ One other gotcha is that BIOS for the Optiplex 7020 [does not support booting di
 1. Store the [EFI system partition](https://en.wikipedia.org/wiki/EFI_system_partition) (or [MBR](https://en.wikipedia.org/wiki/Master_boot_record)) on a SATA drive (SSD/HDD) or USB
 1. If it isn't automatically detected, add your bootloader (for GRUB: `grubx64.efi`) to the boot options from the BIOS setup
 1. Keep all the other partitions on the NVMe drive
-    * Linux: make sure your partitions to mount are listed correctly in [`/etc/fstab`](https://wiki.archlinux.org/index.php/Fstab) and that the Linux [initramfs](https://en.wikipedia.org/wiki/Initial_ramdisk) is in the EFI partition. It'll work like a charm:
+    * Linux: make sure your partitions to mount are listed correctly in [`/etc/fstab`](https://wiki.archlinux.org/title/Fstab) and that the Linux [initramfs](https://en.wikipedia.org/wiki/Initial_ramdisk) is in the EFI partition. It'll work like a charm:
       ```
       # Static information about the filesystems.
       # See fstab(5) for details.
@@ -74,7 +74,7 @@ One other gotcha is that BIOS for the Optiplex 7020 [does not support booting di
       * One way is to do a fresh install on an NVMe drive and copy the EFI partition over to the hard drive
         * Note: might need to [repair the bootloader afterwards](https://www.dell.com/support/article/en-us/sln300987/how-to-repair-the-efi-bootloader-on-a-gpt-hdd-for-windows-7-8-8-1-and-10-on-your-dell-pc?lang=en)
         * I tried installing on partition 3 of my NVMe drive but the installer just returned opaque errors
-      * Ended up installing directly on my HDD and [adding it to grub via os-prober](https://wiki.archlinux.org/index.php/GRUB#Windows)
+      * Ended up installing directly on my HDD and [adding it to grub via os-prober](https://wiki.archlinux.org/title/GRUB#Windows)
 
 Now it takes just a few seconds to load up Linux and start [sway](https://swaywm.org/)!
 
@@ -82,7 +82,7 @@ Now it takes just a few seconds to load up Linux and start [sway](https://swaywm
 
 ## <img class="ico" src="/MaterialDesign-SVG/svg/chip.svg" alt="RAM icon"> RAM: SK Hynix DDR3 1600 MHz
 
-The desktop came with a single stick of 4GB RAM. I've since added another 4GB and an 8GB stick of SK Hynix RAM. The [spec sheet for the Optiplex 7020](https://i.dell.com/sites/csdocuments/Business_smb_merchandizing_Documents/en/us/Dell-OptiPlex-7020-Technical-Spec-Sheet-FINAL.pdf) claims the maximum usable memory is 16GB though the [processor can support up to 32GB](https://ark.intel.com/content/www/us/en/ark/products/80815/intel-core-i5-4590-processor-6m-cache-up-to-3-70-ghz.html). That's not a big deal, I can't imagine using more than 16GB with [zram](https://wiki.archlinux.org/index.php/Improving_performance#Zram_or_zswap) and [swap](https://wiki.archlinux.org/index.php/Swap) enabled.
+The desktop came with a single stick of 4GB RAM. I've since added another 4GB and an 8GB stick of SK Hynix RAM. The [spec sheet for the Optiplex 7020](https://i.dell.com/sites/csdocuments/Business_smb_merchandizing_Documents/en/us/Dell-OptiPlex-7020-Technical-Spec-Sheet-FINAL.pdf) claims the maximum usable memory is 16GB though the [processor can support up to 32GB](https://ark.intel.com/content/www/us/en/ark/products/80815/intel-core-i5-4590-processor-6m-cache-up-to-3-70-ghz.html). That's not a big deal, I can't imagine using more than 16GB with [zram](https://wiki.archlinux.org/title/Improving_performance#Zram_or_zswap) and [swap](https://wiki.archlinux.org/title/Swap) enabled.
 
 ## <img class="ico" src="/MaterialDesign-SVG/svg/memory.svg" alt="CPU icon"> CPU: [Intel i7-4790k](https://ark.intel.com/content/www/us/en/ark/products/80807/intel-core-i7-4790k-processor-8m-cache-up-to-4-40-ghz.html)
 
