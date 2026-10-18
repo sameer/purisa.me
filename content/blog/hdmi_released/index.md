@@ -11,8 +11,8 @@ Last summer, I started working on a [general purpose HDMI implementation for FPG
 ## Terminology
 
 * [Field-Programmable Gate Array (FPGA)](https://en.wikipedia.org/wiki/Field-programmable_gate_array): an integrated circuit that can be configured for different use cases, as opposed to a central processing unit (CPU) or a graphical processing unit (GPU), which are application-specific integrated circuits
-* [High-Definition Media Interface (HDMI)](https://en.wikipedia.org/wiki/HDMI): <img class="ico" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/HDMI_Connector_Pinout.svg/2560px-HDMI_Connector_Pinout.svg.png"> a popular video/audio interface available in almost every TV
-* [Digital Visual Interface (DVI)](https://en.wikipedia.org/wiki/Digital_Visual_Interface): <img class="ico" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/DVI_Connector_Pinout.svg/2560px-DVI_Connector_Pinout.svg.png"> the predecessor of HDMI that only supports video over a bulky connector
+* [High-Definition Media Interface (HDMI)](https://en.wikipedia.org/wiki/HDMI): <img class="ico" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/HDMI_Connector_Pinout.svg/1920px-HDMI_Connector_Pinout.svg.png"> a popular video/audio interface available in almost every TV
+* [Digital Visual Interface (DVI)](https://en.wikipedia.org/wiki/Digital_Visual_Interface): <img class="ico" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/DVI_Connector_Pinout.svg/1920px-DVI_Connector_Pinout.svg.png"> the predecessor of HDMI that only supports video over a bulky connector
 * [Transition Minimized Differential Signaling (TMDS)](https://en.wikipedia.org/wiki/Transition-minimized_differential_signaling): a coding algorithm used in HDMI and DVI that reduces electromagnetic interference (EMI), letting you use really long cables
 
 ## True HDMI Output

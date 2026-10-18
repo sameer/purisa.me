@@ -127,4 +127,4 @@ New platforms:
 
 But I only have so much time! :sweat_smile:
 
-If you have questions or want to contribute, check out [svg2gcode on GitHub](https://github.com/sameer/svg2gcode/). If you liked using svg2gcode or want to bounce ideas off me, [let's chat](/about#social)!
+If you have questions or want to contribute, check out [svg2gcode on GitHub](https://github.com/sameer/svg2gcode/). If you liked using svg2gcode or want to bounce ideas off me, [let's chat](/about/#social)!

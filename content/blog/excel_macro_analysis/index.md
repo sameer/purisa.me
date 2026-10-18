@@ -355,7 +355,7 @@ In other words, it is a shorthand for if statements with no else clause.
 
 EXEC is an XLM macro function for starting another program in the background.
 
-[COUNTBLANK]([COUNTBLANK](https://support.microsoft.com/en-us/office/countblank-function-6a92d772-675c-4bee-b346-24af6bd3ac22)), as the name suggests, counts the number of blank cells in a range.
+[COUNTBLANK](https://support.microsoft.com/en-us/office/countblank-function-6a92d772-675c-4bee-b346-24af6bd3ac22), as the name suggests, counts the number of blank cells in a range.
 So `COUNTBLANK(V201:V224)` equals 25 since all those cells are blank
 and can be safely removed when simplifying things:
 

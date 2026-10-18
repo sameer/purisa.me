@@ -114,6 +114,6 @@ jobs:
         run: cd $GITHUB_WORKSPACE/sim/audio_param_tb/ && hdlmake fetch && hdlmake && make
 ```
 
-Hopefully that comes in handy for you or another reader. Feel free to [reach out](/about) if you have any questions.
+Hopefully that comes in handy for you or another reader. Feel free to [reach out](/about/) if you have any questions.
 
 [^1]: as far as I've seen :slightly_smiling_face:
