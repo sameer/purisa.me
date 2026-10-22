@@ -196,6 +196,7 @@ div>ol>li:is(:first-child) {
 img,
 video {
   max-width: 100%;
+  height: auto;
 }
 
 /* Let text dominate the screen, not images. If it's the last image maybe we want it at original size */

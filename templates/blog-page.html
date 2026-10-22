@@ -16,7 +16,25 @@
     </div>
 </div>
 {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
-{{ page.content | safe }}
+{% set content = page.content %}
+{% for asset in page.assets %}
+    {% set ext = asset | split(pat=".") | last %}
+    {% if ext in ["jpg", "png", "jpeg"] %}
+        {% set meta = get_image_metadata(path=asset) %}
+        {% if meta.height > 480 %}
+            {% set w = meta.width * 480 / meta.height %}
+            {% set w = w | round | int %}
+            {% set h = 480 %}
+        {% else %}
+            {% set w = meta.width %}
+            {% set h = meta.height %}
+        {% endif %}
+        {% set filename = asset | split(pat="/") | last %}
+        {% set url = page.permalink ~ filename %}
+        {% set_global content = content | replace(from='src="' ~ url ~ '"', to='src="' ~ url ~ '" width="' ~ w ~ '" height="' ~ h ~ '"') %}
+    {% endif %}
+{% endfor %}
+{{ content | safe }}
 <h2 id="comments"><img class="ico" src="/MaterialDesign-SVG/svg/comment-text.svg" alt="Comment Icon"> Comments<a
         class="zola-anchor" href="#comments" aria-label="Anchor link for: comments">&#x1F517;</a></h2>
 <script src="https://utteranc.es/client.js" repo="sameer/purisa.me" issue-term="pathname" theme="github-light"
